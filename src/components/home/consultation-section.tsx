@@ -1,5 +1,6 @@
 import React from "react";
 import { CTAButton } from "../cta-button";
+import Image from "next/image";
 
 export interface ConsultationButtonProps {
     text: string;
@@ -66,22 +67,36 @@ export interface ConsultationButtonProps {
     };
   
     return (
-      <div className="flex gap-2.5 justify-center items-center px-96 py-24 mt-20 bg-orange-50 max-md:px-5 max-md:mt-10">
-        <div className="flex flex-col justify-center self-stretch my-auto min-w-[440px] w-full xl:w-[649px] ">
-          {/* Truyền prop bold */}
-          <ContentSection
-            title={content.title}
-            description={content.description}
-            bold={content.bold}
-          />
-          <div className="flex flex-col self-center mt-16 max-w-full text-2xl tracking-tight text-center w-[588px] max-md:mt-10">
-            <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
-            <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full">
-              Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+      <section className="relative">
+        <div className="flex gap-2.5 justify-center items-center px-96 py-24 mt-20 bg-orange-50 max-md:px-5 max-md:mt-10 relative">
+          <div className="flex flex-col justify-center self-stretch my-auto min-w-[440px] w-full xl:w-[649px] ">
+            {/* Truyền prop bold */}
+            <ContentSection
+              title={content.title}
+              description={content.description}
+              bold={content.bold}
+            />
+            <div className="flex flex-col self-center mt-16 max-w-full text-2xl tracking-tight text-center w-[588px] max-md:mt-10">
+              <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+              <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full">
+                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+              </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div className="absolute hidden md:block top-0 right-0 z-10">
+          <Image src="/assets/books/1.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
+        </div>
+
+        <div className="absolute hidden md:block top-1/3 -left-32 z-10">
+          <Image src="/assets/books/2.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
+        </div>
+
+        <div className="absolute hidden md:block -bottom-32 -right-32 z-10">
+          <Image src="/assets/books/3.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
+        </div>
+      </section>
     );
   };
   
