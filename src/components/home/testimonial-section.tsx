@@ -71,8 +71,8 @@ const testimonialData = [
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center px-36 py-24 bg-white max-md:px-5 max-md:max-w-full">
-      <div className="flex flex-col max-w-full w-[1140px]">
+    <div className="flex flex-col justify-center items-center py-24 bg-white max-md:px-5 container mx-auto">
+      <div className="flex flex-col w-full">
         <h1 className="self-center text-4xl font-bold tracking-tighter text-center text-black w-[680px] max-md:max-w-full">
           Những Nhận Xét Gần Đây Của Học Viên Thành Công Đạt Kết Quả Mong Muốn
         </h1>
