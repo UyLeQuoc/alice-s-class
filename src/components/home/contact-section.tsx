@@ -1,4 +1,8 @@
 "use client"
+
+import Image from "next/image";
+import { CTAButton } from "../cta-button";
+
 export interface ContactItemProps {
     icon: string;
     title: string;
@@ -14,15 +18,17 @@ export interface ContactItemProps {
 
 export const ContactItem: React.FC<ContactItemProps> = ({ icon, title, description }) => {
   return (
-    <div className="flex flex-wrap items-center mt-8 w-full max-md:max-w-full">
-      <img
+    <div className="flex gap-8 items-center mt-8 w-full max-md:max-w-full">
+      <Image
         loading="lazy"
-        src={icon}
+        src={"/assets/icons/checkbox.svg"}
+        width={36}
+        height={36}
         alt=""
-        className="object-contain shrink-0 self-stretch my-auto aspect-square w-[50px]"
+        className="object-contain shrink-0 self-stretch my-auto aspect-square w-[36px]"
       />
-      <div className="grow shrink self-stretch my-auto w-[525px] max-md:max-w-full">
-        <span className="font-bold">{title}</span> {description}
+      <div className="grow shrink self-stretch my-auto max-md:max-w-full text-[16px] leading-8">
+        <span className="font-bold text-[16px] leading-8 text-[#B62232]">{title}</span> <br /> {description}
       </div>
     </div>
   );
@@ -81,12 +87,22 @@ export const ContactFormSection: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-2.5 justify-center items-center px-80 pt-24 pb-52 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
+    <div className="flex gap-2.5 justify-center items-center px-40 md:px-20 pt-20 pb-20 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
       <div className="flex flex-col items-center self-stretch my-auto min-w-[240px] w-[750px]">
-        <h1 className="self-stretch text-4xl font-bold tracking-tighter text-center max-md:max-w-full">
+        <h1 className="self-stretch text-4xl font-bold tracking-tighter text-center max-md:max-w-full text-[#B62232]">
           Liên Hệ Ngay Để Được Tư Vấn Miễn Phí, Xây Dựng Lộ Trình Chinh Phục IELTS
         </h1>
-        <div className="flex flex-col mt-10 max-w-full leading-8 w-[588px]">
+        <div className="w-full flex items-center justify-center mt-8">
+                  <Image
+                    src={"/assets/laptop.png"}
+                    alt="Consultation"
+                    width={1500}
+                    height={500}
+                    quality={100}
+                    className="object-cover rounded-lg"
+                  />
+                </div>
+        <div className="flex flex-col mt-10 max-w-full text-[16px] leading-8">
           <div className="flex flex-col w-full max-md:max-w-full">
             <div className="max-md:max-w-full">
               Điền thông tin của bạn vào bên dưới ngay bây giờ và chuyên gia IELTS 9.0 sẽ hướng dẫn bạn cách để đạt điểm IELTS như mong muốn.
@@ -95,12 +111,12 @@ export const ContactFormSection: React.FC = () => {
               <br /><br />
               Còn đây là những thông tin khác bạn sẽ khám phá được trong buổi tư vấn…
             </div>
-            <div className="flex flex-col mt-10 w-full max-md:max-w-full">
+            <div className="flex flex-col mt-8 w-full max-md:max-w-full">
               {contactItems.map((item, index) => (
                 <ContactItem key={index} {...item} />
               ))}
             </div>
-            <div className="mt-10 max-md:max-w-full">
+            <div className="mt-10 max-md:max-w-full text-[16px] leading-8">
               <span className="font-bold">Tại sao chúng tôi lại tư vấn miễn phí?</span> Đơn giản vì chúng tôi tin rằng, khi bạn hiểu rõ giá trị của Alice's Class, bạn sẽ muốn đồng hành cùng chúng tôi trên hành trình chinh phục IELTS. Nếu không, cũng không sao cả! Dù lựa chọn của bạn thế nào, chúng tôi vẫn mong muốn được chia sẻ kiến thức, giúp các bạn học sinh, sinh viên hiểu rõ hơn về IELTS và định hướng học tập đúng đắn.
               <br /><br />
               Và chúng tôi rất tiếc phải chia sẻ rằng số lượng buổi tư vấn rất hạn chế. Do lịch trình bận rộn, chúng tôi chỉ có thể dành thời gian cho 20 cuộc hẹn mỗi tháng.
@@ -109,15 +125,12 @@ export const ContactFormSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="flex flex-col mt-10 max-w-full leading-none text-zinc-500 w-[591px]">
-          <FormInput label="Tên của bạn" id="name" />
-          <FormInput label="Địa chỉ Email" id="email" type="email" />
-          <FormInput label="Số điện thoại" id="phone" type="tel" />
-          <FormInput label="Câu hỏi thêm" id="question" isTextArea />
-          <button type="submit" className="gap-2.5 self-stretch px-12 py-5 mt-2.5 w-full text-center text-white bg-rose-700 max-md:px-5 max-md:max-w-full">
-            <span className="font-bold">NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ</span>
-          </button>
-        </form>
+        <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[588px] max-md:mt-10">
+              <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+              <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
+                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+              </div>
+            </div>
       </div>
     </div>
   );

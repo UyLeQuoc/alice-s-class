@@ -1,5 +1,6 @@
 import Image from "next/image";
 import * as React from "react";
+import { CTAButton } from "../cta-button";
 
 export interface TestimonialImageProps {
     src: string;
@@ -71,36 +72,27 @@ const testimonialData = [
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center py-24 bg-white max-md:px-5 container mx-auto">
+    <div className="flex flex-col justify-center items-center py-20 bg-white max-md:px-5 container mx-auto">
       <div className="flex flex-col w-full">
-        <h1 className="self-center text-4xl font-bold tracking-tighter text-center text-black w-[680px] max-md:max-w-full">
+        <h1 className="self-center text-4xl font-bold tracking-tighter text-center w-[680px] max-md:max-w-full text-[#B62232]">
           Những Nhận Xét Gần Đây Của Học Viên Thành Công Đạt Kết Quả Mong Muốn
         </h1>
         <div className="flex flex-col mt-12 w-full max-md:mt-10 max-md:max-w-full">
           <div className="flex flex-wrap gap-2.5 justify-center items-center w-full max-md:max-w-full">
-            {testimonialData.map((column, index) => (
-              <div key={index} style={{ width: column.width }}>
-                <TestimonialColumn images={column.images} />
+            <Image
+              src={"/assets/student.jpg"}
+              alt="Quote Left"
+              width={1000}
+              height={1000}
+              quality={100}
+            />
+          </div>
+          <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[588px] max-md:mt-10">
+              <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+              <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
+                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
               </div>
-            ))}
-          </div>
-          <div className="flex flex-col self-center mt-16 max-w-full text-2xl tracking-tight text-center w-[588px] max-md:mt-10">
-            <button 
-              className="gap-2.5 self-stretch px-12 py-6 w-full leading-none text-white bg-rose-700 max-md:px-5 max-md:max-w-full"
-              aria-label="Nhận buổi tư vấn chiến lược miễn phí"
-            >
-              <span className="font-bold">
-                NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
-              </span>
-            </button>
-            <p className="self-center mt-2.5 leading-8 text-black max-md:max-w-full">
-              Tìm hiểu cách bạn chắc chắn nâng được band
-                <br />
-              điểm IELTS và tự tin sử dụng tiếng Anh vào đời
-                <br />
-               sống thường ngày
-            </p>
-          </div>
+            </div>
         </div>
       </div>
     </div>

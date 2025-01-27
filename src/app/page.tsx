@@ -27,21 +27,18 @@ export default function Home() {
         />
         <ConsultationBenefitsSection />
 
+        
+
+        <ContactFormSection />
+
         <Image
-          src="/assets/class-1.jpg"
+          src="/assets/footer.jpg"
           alt="Logo"
           width={1000}
           height={1000}
           className="object-cover w-full"
         />
-
-        <ContactFormSection />
-
-        
       </main>
-      {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        Hello World
-      </footer> */}
     </div>
   );
 }
