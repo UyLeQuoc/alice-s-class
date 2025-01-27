@@ -33,7 +33,7 @@ export interface ConsultationButtonProps {
     return (
       <div className="flex flex-col w-full text-black max-md:max-w-full items-center justify-center">
         <div className="text-[36px] text-[#B62232] font-bold tracking-tighter text-center max-md:max-w-full leading-[48px]  min-w-[440px] w-full xl:w-[649px]">
-          Chiến Lược Khác Biệt Giúp Bạn <br />
+          Chiến Lược Khác Biệt Giúp Bạn
           Thành Công Đạt Điểm IELTS Như Ý
         </div>
         <div className="w-full flex items-center justify-center mt-8">
@@ -78,23 +78,23 @@ export interface ConsultationButtonProps {
     };
   
     return (
-      <section className="relative">
-        <div className="flex gap-2.5 justify-center items-center px-80 py-20 bg-orange-50 max-md:px-5 max-md:mt-10 relative">
-          <div className="flex flex-col justify-center self-stretch my-auto">
-            {/* Truyền prop bold */}
-            <ContentSection
-              title={content.title}
-              description={content.description}
-              bold={content.bold}
-            />
-            <div className="flex flex-col self-center mt-8 max-w-full text-2xl tracking-tight text-center w-[588px] max-md:mt-10">
-              <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
-              <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[20px] italic font-bold">
-                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
-              </div>
-            </div>
-          </div>
+      <section className="relative overflow-hidden">
+  <div className="flex flex-col md:flex-row gap-2.5 justify-center items-center px-10 lg:px-80 py-10 md:py-20 bg-orange-50 max-md:mt-10 relative">
+    <div className="flex flex-col justify-center self-stretch my-auto">
+      <ContentSection
+        title={content.title}
+        description={content.description}
+        bold={content.bold}
+      />
+      <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[588px] max-md:mt-10">
+        <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+        <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
+          Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
         </div>
+      </div>
+    </div>
+  </div>
+
 
         {/* <div className="absolute hidden md:block top-0 right-0 z-10">
           <Image src="/assets/books/1.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
