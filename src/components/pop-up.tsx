@@ -16,7 +16,8 @@ export default function PopUpForm({ open, setOpen }: any) {
     message: ""
   });
 
-  const [successDialogOpen, setSuccessDialogOpen] = React.useState(false); // Trạng thái SuccessDialog
+  const [loading, setLoading] = React.useState(false); // Loading state
+  const [successDialogOpen, setSuccessDialogOpen] = React.useState(false); // Success dialog state
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,11 +29,12 @@ export default function PopUpForm({ open, setOpen }: any) {
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbxzjtClMYfkcJRrgHl-AEFCRTeEq-2VHr8hXJbwIYgmkI7ds_ioPTKZ6-BPD7Dh_dJQnA/exec";
 
+    setLoading(true); // Set loading state to true
     try {
       const response = await axios.post(scriptURL, formData, {
         headers: {
-          "Content-Type": "text/plain;charset=utf-8", // Avoid CORS preflight request
-        },
+          "Content-Type": "text/plain;charset=utf-8" // Avoid CORS preflight request
+        }
       });
 
       const result = response.data;
@@ -49,6 +51,8 @@ export default function PopUpForm({ open, setOpen }: any) {
     } catch (error) {
       console.error("Error:", error);
       alert("Lỗi kết nối, vui lòng thử lại.");
+    } finally {
+      setLoading(false); // Reset loading state
     }
   };
 
@@ -105,8 +109,19 @@ export default function PopUpForm({ open, setOpen }: any) {
                 onChange={handleChange}
               />
             </div>
-            <Button type="submit" className="w-full bg-red-700 text-white hover:bg-red-800">
-              NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
+            <Button
+              type="submit"
+              className="w-full bg-red-700 text-white hover:bg-red-800"
+              disabled={loading} // Disable the button when loading
+            >
+              {loading ? (
+                <div className="flex items-center justify-center space-x-2">
+                  <span className="loader"></span> {/* Replace with a spinner component or loader animation */}
+                  <span>Đang gửi...</span>
+                </div>
+              ) : (
+                "NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ"
+              )}
             </Button>
           </form>
         </DialogContent>
