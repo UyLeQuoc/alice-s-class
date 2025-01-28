@@ -86,3 +86,22 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Add these styles to your globals.css or a new CSS file */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #b62232 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #b62232 !important;
+}
+
+.swiper-container {
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  height: auto;
+}
+

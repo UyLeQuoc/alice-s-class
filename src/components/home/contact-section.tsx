@@ -88,7 +88,7 @@ export const ContactFormSection: React.FC = () => {
 
   return (
     <div className="flex gap-2.5 justify-center items-center px-40 md:px-20 pt-20 pb-20 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
-      <div className="flex flex-col items-center self-stretch my-auto min-w-[240px] w-[750px]">
+      <div className="flex flex-col items-center self-stretch my-auto min-w-[240px] w-[700px]">
         <h1 className="self-stretch text-4xl font-bold tracking-tighter text-center max-md:max-w-full text-[#B62232]">
           Liên Hệ Ngay Để Được Tư Vấn Miễn Phí, Xây Dựng Lộ Trình Chinh Phục IELTS
         </h1>
@@ -125,7 +125,7 @@ export const ContactFormSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[588px] max-md:mt-10">
+        <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
               <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
               <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
                 Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày

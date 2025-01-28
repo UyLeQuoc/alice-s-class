@@ -68,8 +68,8 @@ export interface ConsultationButtonProps {
     const content = {
       title: "Chiến Lược Khác Biệt Giúp Bạn Thành Công Đạt Điểm IELTS Như Ý",
       description: [
-        `Chìa khóa để đạt được band điểm IELTS mục tiêu và sử dụng tiếng Anh thành thạo chính là lộ trình học được cá nhân hóa, tập trung vào kỹ năng còn yếu và chiêm nghiệm liên tục để kịp thời giải quyết vấn đề. Thiếu đi điều này, bạn có nguy cơ cao sẽ lãng phí thời gian, công sức, mãi dậm chân tại chỗ. Đáng tiếc, đây là thực trạng của nhiều người khi áp dụng những phương pháp học thiếu cá nhân hóa, không giải quyết được gốc rễ vấn đề và không phù hợp với năng lực của mình.`,
-        `Chúng tôi xây dựng nền tảng tiếng Anh vững chắc bằng cách phát triển toàn diện 4 kỹ năng Nghe - Nói - Đọc - Viết thông qua các chủ đề thực tế, gần gũi, đồng thời tạo môi trường 100% tiếng Anh để học viên đắm chìm và rèn luyện phản xạ. Điểm khác biệt tạo nên sự đột phá chính là hệ thống độc quyền Tracking System: Theo dõi chi tiết tiến độ của bản thân, từ đó điều chỉnh lộ trình học tập tức thời. Nhờ vậy, bạn sẽ tối ưu thời gian học, tập trung khắc phục điểm yếu và đi đúng hướng trên hành trình chinh phục IELTS.`,
+        `Chìa khóa để đạt điểm IELTS như ý chính là lộ trình học được cá nhân hóa, tập trung vào điểm yếu và liên tục chiêm nghiệm để cải thiện. Thiếu điều này, bạn dễ lãng phí thời gian và công sức. Đáng tiếc, rất nhiều người lại đang gặp tình trạng này khi áp dụng những phương pháp học thiếu cá nhân hóa, không phù hợp với năng lực bản thân.`,
+        `Chúng tôi giúp bạn xây dựng nền tảng vững chắc bằng cách phát triển toàn diện 4 kỹ năng qua các chủ đề thực tế và luyện tập áp dụng tiếng Anh vào đời sống. Điểm khác biệt tạo nên sự đột phá của chúng tôi chính là Tracking System: Theo dõi chi tiết tiến độ của bản thân, từ đó điều chỉnh lộ trình học tức thời, giúp bạn tối ưu thời gian, tập trung khắc phục điểm yếu và chinh phục IELTS hiệu quả.`,
       ],
       bold: [
         "Đáng tiếc",
@@ -86,7 +86,7 @@ export interface ConsultationButtonProps {
         description={content.description}
         bold={content.bold}
       />
-      <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[588px] max-md:mt-10">
+      <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
         <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
         <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
           Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày

@@ -21,7 +21,8 @@ export const Header = () => {
           />
           <div className="text-center md:text-left">
             <p className="italic text-lg md:text-2xl">Bạn có câu hỏi?</p>
-            <p className="font-bold text-xl md:text-[28px]">076 728 9011</p>
+            {/* <a href="tel:+4733378901">+84 76 728 9011</a> */}
+            <a href="tel:+4733378901" className='font-bold text-xl md:text-[28px] hover:underline'>076 728 9011</a>
           </div>
         </div>
       </div>

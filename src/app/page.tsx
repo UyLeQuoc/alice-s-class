@@ -3,6 +3,7 @@ import { AliceClassHeroSection } from "@/components/home/alice-class-hero-sectio
 import { ConsultationBenefitsSection } from "@/components/home/benefit-section";
 import { ConsultationSection } from "@/components/home/consultation-section";
 import { ContactFormSection } from "@/components/home/contact-section";
+import FutureSection from "@/components/home/future-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { ResultSection } from "@/components/home/result-section";
 import { TestimonialsSection } from "@/components/home/testimonial-section";
@@ -27,7 +28,7 @@ export default function Home() {
         />
         <ConsultationBenefitsSection />
 
-        
+        <FutureSection />
 
         <ContactFormSection />
 
