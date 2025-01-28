@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
+import { usePopUpStore } from "@/lib/popupStore"
 import Image from "next/image"
 
 export const HeroSection = () => {
+  const { openPopUp } = usePopUpStore()
+
   return (
     <section className="px-4 py-12 md:px-6 lg:px-8 relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
       <div>
@@ -40,7 +42,9 @@ export const HeroSection = () => {
           Như Mong Muốn Nhanh Và Hiệu Quả
         </p>
 
-        <Button className="bg-[#C41E3A] px-4 sm:px-6 md:px-8 py-4 md:py-4 lg:py-6 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white hover:bg-[#A01830] rounded-none w-full sm:w-auto">
+        <Button 
+          onClick={ openPopUp}
+        className="bg-[#C41E3A] px-4 sm:px-6 md:px-10 py-4 md:py-4 lg:py-8 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white hover:bg-[#A01830] rounded-none w-full sm:w-auto">
           NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
         </Button>
       </div>
