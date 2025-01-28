@@ -1,100 +1,110 @@
-export interface BenefitItemProps {
-    iconSrc: string;
-    title: string;
-    description: string;
-  }
-  
-  export interface ConsultationButtonProps {
-    text: string;
-    subText: string;
-  }
+import Image from "next/image";
+import * as React from "react";
 
-  export const BenefitItem: React.FC<BenefitItemProps> = ({ iconSrc, title, description }) => {
-    return (
-      <div className="flex flex-col justify-center mt-9 w-full max-md:max-w-full">
-        <div className="flex flex-wrap justify-center items-center w-full text-3xl font-bold tracking-tight leading-9 max-md:max-w-full">
-          <img
-            loading="lazy"
-            src={iconSrc}
-            alt=""
-            className="object-contain shrink-0 self-stretch my-auto aspect-square w-[50px]"
-          />
-          <div className="grow shrink self-stretch my-auto w-[770px] max-md:max-w-full">
-            {title}
-          </div>
-        </div>
-        <div className="self-end text-2xl tracking-tight leading-8 max-md:max-w-full">
-          {description}
-        </div>
+interface TitledSectionProps {
+  title: string;
+  description: string;
+  imgSrc: string;
+  imgAlt: string;
+}
+
+function TitledSection({ title, description, imgSrc, imgAlt }: TitledSectionProps) {
+  return (
+    <div className="flex flex-row items-start gap-4 mt-6 w-full max-w-4xl">
+      <Image
+        src={"/assets/icons/black-checkbox.svg"}
+        width={36}
+        height={36}
+        alt=""
+        className="object-contain shrink-0"
+      />
+      <div className="flex-1">
+        <h3 className="text-xl md:text-2xl font-semibold text-black">{title}</h3>
+        <p className="mt-2 text-base leading-7 text-gray-800">{description}</p>
       </div>
-    );
-  };
+    </div>
+  );
+}
 
-  export const ConsultationButton: React.FC<ConsultationButtonProps> = ({ text, subText }) => {
-    return (
-      <div className="flex flex-col self-center mt-16 max-w-full text-2xl tracking-tight text-center w-[588px] max-md:mt-10">
-        <button className="gap-2.5 self-stretch px-12 py-5 w-full leading-none text-white bg-rose-700 max-md:px-5 max-md:max-w-full">
-          <span className="font-bold">{text}</span>
-        </button>
-        <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full">
-          {subText}
-        </div>
-      </div>
-    );
-  };
-
-  const benefitsData = [
+export function BenefitSection() {
+  const sections = [
     {
-      iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/33fc38ff20bd5828d9d1bd214cafef4740818e121742981ebd583f0d7e9dc9cf?apiKey=7ed9c1bb2a694ebca97c186157446de0&",
-      title: "Sai lầm nghiêm trọng trong cách học IELTS của 90% học viên đang mắc phải",
-      description: "Nếu như bạn đã từng là người \"cày\" ngày đêm nhưng điểm số vẫn dậm chân tại chỗ, thì có thể bạn đang mắc phải lỗi sai lầm phổ biến này, đây cũng là nguyên nhân gốc rễ khiến bạn học mãi không tiến bộ"
+      title: "Sai Lầm Nghiêm Trọng 90% Người Học IELTS Đang Mắc Phải",
+      description:
+        "Nếu như bạn đã từng là người \"cày\" ngày đêm nhưng điểm số vẫn dậm chân tại chỗ, thì có thể bạn đang mắc phải lỗi sai lầm phổ biến này, đây cũng là nguyên nhân gốc rễ khiến bạn học mãi không tiến bộ",
+      imgSrc: "/assets/icons/black-checkbox.svg",
+      imgAlt: "Icon illustrating common mistakes"
     },
     {
-      iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/29f1776a9aa6e9fec119d6e09e9b1082baa1927b8914101f87fb09ad6b3cbd88?apiKey=7ed9c1bb2a694ebca97c186157446de0&",
-      title: "Nhận lộ trình học và cách học phù hợp cho bạn, và tại sao thiếu cái này bạn khó đạt điểm IELTS như kỳ vọng",
-      description: "Chúng tôi đã xây dựng lộ trình cho mỗi học viên trong hơn 3 năm và họ luôn đạt được target nhanh ít hơn 30% so với lúc tự học - và bây giờ bạn cũng có thể đạt được kết quả giống vậy! Lộ trình và phương pháp đã được điều chỉnh để phù hợp với mục tiêu, thời gian và khả năng của bạn"
+      title: "Tại Sao Bạn Phải Có Lộ Trình Và Phương Pháp Học Ngay Lập Tức",
+      description:
+        "Nếu như bạn chưa có, chúng tôi sẽ cho bạn một lộ trình và phương pháp chỉ dành riêng cho bạn. Và giải thích tại sao khi có được lộ trình này, học viên cũ luôn có được kết quả nhanh hơn 30% so với lúc tự học",
+      imgSrc: "/assets/icons/black-checkbox.svg",
+      imgAlt: "Icon showing learning roadmap"
     },
     {
-      iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/33fc38ff20bd5828d9d1bd214cafef4740818e121742981ebd583f0d7e9dc9cf?apiKey=7ed9c1bb2a694ebca97c186157446de0&",
-      title: "Chiến lược làm bài giúp bạn bứt phá từng kỹ năng mà nhiều trung tâm không muốn tiết lộ với bạn",
-      description: "Chuyên gia 9.0 IELTS sẽ chia sẻ chiến lược làm bài hiệu quả cho từng phần thi, cách tối ưu hóa điểm số dựa trên điểm mạnh của bạn và phương pháp luyện tập chuyên sâu để khắc phục điểm yếu."
+      title:
+        "Làm Thế Nào Để Đạt Được Điểm Số IELTS Mục Tiêu Mà Không Cần \"Cày Ngày Cày Đêm\" Hay \"Nhồi Nhét\" Từ Vựng?",
+      description:
+        "(Gợi ý: Bạn sẽ không tìm thấy thông tin này chỉ với một cú click chuột trên Google đâu!)",
+      imgSrc: "/assets/icons/black-checkbox.svg",
+      imgAlt: "Icon providing learning tips"
     },
     {
-      iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/33fc38ff20bd5828d9d1bd214cafef4740818e121742981ebd583f0d7e9dc9cf?apiKey=7ed9c1bb2a694ebca97c186157446de0&",
-      title: "Làm thế nào để đạt được điểm số IELTS mục tiêu mà không cần \"cày ngày cày đêm\" hay \"nhồi nhét\" từ vựng?",
-      description: "(Gợi ý: Bạn sẽ không tìm thấy thông tin này chỉ với một cú click chuột trên Google đâu!)"
+      title:
+        "Chiến Lược Làm Bài Giúp Bạn Bứt Phá Từng Kỹ Năng Mà Nhiều Trung Tâm Không Muốn Tiết Lộ Với Bạn",
+      description:
+        "Chuyên gia 8.0 IELTS sẽ chia sẻ chiến lược làm bài hiệu quả cho từng phần thi, cách tối ưu hóa điểm số dựa trên điểm mạnh của bạn và phương pháp luyện tập chuyên sâu để khắc phục điểm yếu.",
+      imgSrc: "/assets/icons/black-checkbox.svg",
+      imgAlt: "Icon showing exam strategies"
     },
     {
-      iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/33fc38ff20bd5828d9d1bd214cafef4740818e121742981ebd583f0d7e9dc9cf?apiKey=7ed9c1bb2a694ebca97c186157446de0&",
       title: "Giải đáp \"tất tần tật\" thắc mắc về IELTS",
-      description: "Bạn có bất kỳ câu hỏi nào về kỳ thi IELTS, phương pháp học, tài liệu ôn luyện hay chiến lược làm bài? Hãy đặt câu hỏi trực tiếp với chúng tôi để được giải đáp (chúng tôi là chuyên gia trong IELTS chứ không phải nhân viên bán hàng)"
+      description:
+        "Bạn có bất kỳ câu hỏi nào về kỳ thi IELTS, phương pháp học, tài liệu ôn luyện hay chiến lược làm bài? Chúng tôi sẽ giải đáp toàn bộ mọi thứ, không giấu giếm bất cứ thứ gì",
+      imgSrc: "/assets/icons/black-checkbox.svg",
+      imgAlt: "Icon answering IELTS queries"
     }
   ];
-  
-  export const ConsultationBenefitsSection: React.FC = () => {
-    return (
-      <div className="flex gap-2.5 justify-center items-center px-80 py-24 bg-white max-md:px-5">
-        <div className="flex flex-col self-stretch my-auto min-w-[240px] w-[831px]">
-          <div className="flex flex-col w-full text-black max-md:max-w-full">
-            <h1 className="text-4xl font-bold tracking-tighter text-center max-md:max-w-full">
-              Đây Là Tóm Tắt Những Gì Bạn Sẽ Nhận Được Trong Buổi Tư Vấn Miễn Phí...
-            </h1>
-            <div className="flex flex-col mt-16 w-full max-md:mt-10 max-md:max-w-full">
-              {benefitsData.map((benefit, index) => (
-                <BenefitItem
-                  key={index}
-                  iconSrc={benefit.iconSrc}
-                  title={benefit.title}
-                  description={benefit.description}
-                />
-              ))}
-            </div>
-          </div>
-          <ConsultationButton
-            text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ"
-            subText="Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày"
-          />
-        </div>
+
+  return (
+    <div className="relative flex flex-col justify-center items-center py-16 px-6 sm:px-10 lg:px-32 bg-orange-50 overflow-hidden">
+      {/* Header Text */}
+      <div className="text-3xl md:text-4xl font-bold text-center text-rose-700 capitalize max-w-2xl">
+        Đây Là Tóm Tắt Những Gì Bạn Sẽ Nhận Được Trong Buổi Tư Vấn Miễn Phí...
       </div>
-    );
-  };
+
+      {/* Benefit Sections */}
+      <div className="flex flex-col mt-8 w-full max-w-4xl">
+        {sections.map((section, index) => (
+          <TitledSection
+            key={index}
+            title={section.title}
+            description={section.description}
+            imgSrc={section.imgSrc}
+            imgAlt={section.imgAlt}
+          />
+        ))}
+      </div>
+
+      {/* CTA Button */}
+      <div className="flex flex-col mt-8 text-center max-w-lg">
+        <button className="px-6 py-4 text-2xl font-bold tracking-tight text-white bg-rose-700 rounded-lg hover:bg-rose-800 transition">
+          NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
+        </button>
+        <p className="mt-3 text-lg leading-7 text-black">
+          Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày.
+        </p>
+      </div>
+
+      {/* Floating Book Images for Design */}
+      <div className="absolute hidden lg:block top-1/3 -left-32 z-10">
+        <Image src="/assets/books/2.png" alt="Consultation" width={300} height={400} className="h-[300px] w-[250px]" />
+      </div>
+
+      <div className="absolute hidden lg:block -bottom-0 -right-20 z-10">
+        <Image src="/assets/books/3.png" alt="Consultation" width={300} height={400} className="h-[300px] w-[250px]" />
+      </div>
+    </div>
+  );
+}

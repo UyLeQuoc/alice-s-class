@@ -1,41 +1,36 @@
+"use client"
+
 import Image from "next/image";
-import * as React from "react";
+import React, { useState } from "react";
 import { CTAButton } from "../cta-button";
 
 export interface TestimonialImageProps {
-    src: string;
-    alt: string;
-    className?: string;
-  }
-  
-  export interface TestimonialColumnProps {
-    images: TestimonialImageProps[];
-  }
-  
-export const TestimonialColumn: React.FC<TestimonialColumnProps> = ({ images }) => (
-  <div className="flex flex-col self-stretch my-auto min-w-[240px]">
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+export interface TestimonialColumnProps {
+  images: TestimonialImageProps[];
+  onImageClick: (index: number) => void;
+}
+
+export const TestimonialColumn: React.FC<TestimonialColumnProps> = ({ images, onImageClick }) => (
+  <div className="flex flex-col gap-5 self-stretch min-w-[240px]">
     {images.map((image, index) => (
-      <TestimonialImage
-        key={index}
-        src={image.src}
-        alt={image.alt}
-        className={`${index > 0 ? "mt-5" : ""} ${image.className}`}
-      />
+      <div key={index} className="relative cursor-pointer" onClick={() => onImageClick(index)}>
+        <Image
+          src={image.src}
+          alt={image.alt}
+          className={`object-cover rounded-md shadow-md w-full ${image.className}`}
+          width={262}
+          height={262}
+          loading="lazy"
+        />
+      </div>
     ))}
   </div>
 );
-
-
-export const TestimonialImage: React.FC<TestimonialImageProps> = ({ src, alt, className }) => (
-    <Image
-      loading="lazy"
-      src={src}
-      alt={alt}
-      className={`object-contain w-full ${className}`}
-        width={262}
-        height={262}
-    />
-  );
 
 const testimonialData = [
   {
@@ -50,7 +45,7 @@ const testimonialData = [
     images: [
       { src: "https://cdn.builder.io/api/v1/image/assets/TEMP/6e562eb7895a93250be58905387122531b86672851ed8c01dfcd55c685a0a9b5?apiKey=7ed9c1bb2a694ebca97c186157446de0&", alt: "Student success story 3", className: "aspect-[1.91]" },
       { src: "https://cdn.builder.io/api/v1/image/assets/TEMP/deac1382eaa1e6a2a5da49a39d7010a9847df4930fca1b67106fbe3173d98706?apiKey=7ed9c1bb2a694ebca97c186157446de0&", alt: "Student success story 4", className: "aspect-[1.15]" },
-      { src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3313a37a076a39beb2ffc8b34e2126727e21be0350d0090872a13357070245ab?apiKey=7ed9c1bb2a694ebca97c186157446de0&", alt: "Student success story 5", className: "aspect-[2.08]" }
+      { src: "https://cdn.builder.io/api/v1/image/assets/TEMP/3313a37a076a39beb2ffc8b34e2126727e21be0350d0090872a13357070245ab?apiKey=7ed9c1bb2a694ebca97c186157446de0&", alt: "Student success story 4", className: "aspect-[2.08]" }
     ]
   },
   {
@@ -71,30 +66,58 @@ const testimonialData = [
 ];
 
 export const TestimonialsSection: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState<TestimonialImageProps | null>(null);
+
+  const openModal = (image: TestimonialImageProps) => {
+    setCurrentImage(image);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setCurrentImage(null);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center py-20 bg-white max-md:px-5 container mx-auto">
       <div className="flex flex-col w-full">
         <h1 className="self-center text-4xl font-bold tracking-tighter text-center w-[680px] max-md:max-w-full text-[#B62232]">
           Những Nhận Xét Gần Đây Của Học Viên Thành Công Đạt Kết Quả Mong Muốn
         </h1>
-        <div className="flex flex-col mt-12 w-full max-md:mt-10 max-md:max-w-full">
-          <div className="flex flex-wrap gap-2.5 justify-center items-center w-full max-md:max-w-full">
-            <Image
-              src={"/assets/student.jpg"}
-              alt="Quote Left"
-              width={1000}
-              height={1000}
-              quality={100}
-            />
+        <div className="flex-wrap gap-6 justify-center mt-12 grid grid-cols-4">
+          {testimonialData.map((column, columnIndex) => (
+            <TestimonialColumn key={columnIndex} images={column.images} onImageClick={(index) => openModal(column.images[index])} />
+          ))}
+        </div>
+        <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
+          <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+          <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
+            Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
           </div>
-          <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
-              <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
-              <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
-                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
-              </div>
-            </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isOpen && currentImage !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative">
+            <Image
+              src={currentImage.src}
+              alt={currentImage.alt}
+              width={500}
+              height={500}
+              className="rounded-lg"
+            />
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 bg-white text-black p-2 rounded-full"
+            >
+              X
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

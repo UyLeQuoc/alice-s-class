@@ -94,19 +94,6 @@ export interface ConsultationButtonProps {
       </div>
     </div>
   </div>
-
-
-        {/* <div className="absolute hidden md:block top-0 right-0 z-10">
-          <Image src="/assets/books/1.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
-        </div>
-
-        <div className="absolute hidden md:block top-1/3 -left-32 z-10">
-          <Image src="/assets/books/2.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
-        </div>
-
-        <div className="absolute hidden md:block -bottom-32 -right-32 z-10">
-          <Image src="/assets/books/3.png" alt="Consultation" width={500} height={500} className="h-[350px] w-[300px]" />
-        </div> */}
       </section>
     );
   };

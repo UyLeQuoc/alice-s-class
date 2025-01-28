@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { AliceClassHeroSection } from "@/components/home/alice-class-hero-section";
-import { ConsultationBenefitsSection } from "@/components/home/benefit-section";
+import { BenefitSection } from "@/components/home/benefit-section";
 import { ConsultationSection } from "@/components/home/consultation-section";
 import { ContactFormSection } from "@/components/home/contact-section";
 import FutureSection from "@/components/home/future-section";
@@ -19,14 +19,7 @@ export default function Home() {
         <ConsultationSection />
         <TestimonialsSection />
         <ResultSection />
-        <Image
-          src="/assets/class.jpg"
-          alt="Logo"
-          width={1000}
-          height={1000}
-          className="object-cover w-full"
-        />
-        <ConsultationBenefitsSection />
+        <BenefitSection />
 
         <FutureSection />
 
