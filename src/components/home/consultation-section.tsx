@@ -31,10 +31,9 @@ export interface ConsultationButtonProps {
     };
   
     return (
-      <div className="flex flex-col w-full text-black max-md:max-w-full items-center justify-center">
-        <div className="text-[36px] text-[#B62232] font-bold tracking-tighter text-center max-md:max-w-full leading-[48px]  min-w-[440px] w-full xl:w-[649px]">
-          Chiến Lược Khác Biệt Giúp Bạn
-          Thành Công Đạt Điểm IELTS Như Ý
+      <div className="flex flex-col w-full text-black max-md:w-full items-center justify-center">
+        <div className="text-[28px] md:text-[36px] text-[#B62232] font-bold tracking-tighter text-center leading-[36px] md:leading-[48px] w-full lg:w-[60%]">
+          Chiến Lược Khác Biệt Giúp Bạn Thành Công Đạt Điểm IELTS Như Ý
         </div>
         <div className="w-full flex items-center justify-center mt-8">
           <Image
@@ -43,10 +42,10 @@ export interface ConsultationButtonProps {
             width={1500}
             height={500}
             quality={100}
-            className="object-cover rounded-lg"
+            className="object-cover rounded-lg w-full max-w-[800px]"
           />
         </div>
-        <div className="self-center mt-10 text-[16px] tracking-tight leading-8 max-md:max-w-full  min-w-[440px] w-full xl:w-[649px] ">
+        <div className="self-center mt-10 text-[14px] md:text-[16px] tracking-tight leading-6 md:leading-8 max-md:w-full lg:w-[60%]">
           {description.map((paragraph, index) => (
             <React.Fragment key={index}>
               {formatText(paragraph)}
@@ -79,22 +78,21 @@ export interface ConsultationButtonProps {
   
     return (
       <section className="relative overflow-hidden">
-  <div className="flex flex-col md:flex-row gap-2.5 justify-center items-center px-10 lg:px-80 py-10 md:py-20 bg-orange-50 max-md:mt-10 relative">
-    <div className="flex flex-col justify-center self-stretch my-auto">
-      <ContentSection
-        title={content.title}
-        description={content.description}
-        bold={content.bold}
-      />
-      <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
-        <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
-        <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
-          Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+        <div className="flex flex-col md:flex-row gap-2.5 justify-center items-center px-6 md:px-10 lg:px-40 py-10 md:py-20 bg-orange-50 max-md:mt-10">
+          <div className="flex flex-col justify-center self-stretch my-auto w-full">
+            <ContentSection
+              title={content.title}
+              description={content.description}
+              bold={content.bold}
+            />
+            <div className="flex flex-col self-center mt-8 max-w-full text-base md:text-lg tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
+              <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+              <div className="self-center mt-2.5 leading-6 md:leading-8 text-black text-[16px] md:text-[18px] italic font-bold">
+                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
       </section>
     );
   };
-  
