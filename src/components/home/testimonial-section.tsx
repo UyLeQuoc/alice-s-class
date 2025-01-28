@@ -1,8 +1,10 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import React, { useState } from "react";
 import { CTAButton } from "../cta-button";
+import { XIcon } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export interface TestimonialImageProps {
   src: string;
@@ -76,7 +78,7 @@ export const TestimonialsSection: React.FC = () => {
 
   const closeModal = () => {
     setIsOpen(false);
-    setCurrentImage(null);
+    setTimeout(() => setCurrentImage(null), 300); // Delay to allow animation to complete
   };
 
   return (
@@ -85,7 +87,7 @@ export const TestimonialsSection: React.FC = () => {
         <h1 className="self-center text-4xl font-bold tracking-tighter text-center w-[680px] max-md:max-w-full text-[#B62232]">
           Những Nhận Xét Gần Đây Của Học Viên Thành Công Đạt Kết Quả Mong Muốn
         </h1>
-        <div className="flex-wrap gap-6 justify-center mt-12 grid grid-cols-4">
+        <div className="flex-wrap gap-6 justify-center mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {testimonialData.map((column, columnIndex) => (
             <TestimonialColumn key={columnIndex} images={column.images} onImageClick={(index) => openModal(column.images[index])} />
           ))}
@@ -99,25 +101,39 @@ export const TestimonialsSection: React.FC = () => {
       </div>
 
       {/* Modal */}
-      {isOpen && currentImage !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <div className="relative">
-            <Image
-              src={currentImage.src}
-              alt={currentImage.alt}
-              width={500}
-              height={500}
-              className="rounded-lg"
-            />
-            <button
-              onClick={closeModal}
-              className="absolute top-2 right-2 bg-white text-black p-2 rounded-full"
+      <AnimatePresence>
+        {isOpen && currentImage !== null && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeModal}
+          >
+            <motion.div
+              className="relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              onClick={(e:any) => e.stopPropagation()} // Prevent close when clicking inside the modal
             >
-              X
-            </button>
-          </div>
-        </div>
-      )}
+              <Image
+                src={currentImage.src}
+                alt={currentImage.alt}
+                width={500}
+                height={500}
+                className="rounded-lg"
+              />
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 bg-white text-black p-2 rounded-full"
+              >
+                <XIcon size={24} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

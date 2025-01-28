@@ -1,9 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import { CTAButton } from '../cta-button';
 
 export default function FutureSection() {
   return (
-    <section className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 bg-[#FFF6F1]">
+    <div>
+      <section className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 bg-[#FFF6F1]">
       <div className="grid gap-12 lg:grid-cols-11 items-center">
         {/* Left column with stacked images */}
         <div className="space-y-6 lg:col-span-5 order-last lg:order-first">
@@ -12,15 +14,17 @@ export default function FutureSection() {
             alt="IELTS students celebrating"
             width={600}
             height={400}
-            className="shadow-lg w-full aspect-video object-cover rounded-lg"
+            quality={100}
+            className="w-full aspect-video object-cover"
             priority
           />
           <Image
-            src="/assets/alice/1.jpg"
+            src="/assets/alice/2.jpg"
             alt="IELTS certificate showcase"
             width={600}
             height={400}
-            className="shadow-lg w-full aspect-video object-cover rounded-lg"
+            quality={100}
+            className="w-full aspect-video object-cover"
           />
         </div>
 
@@ -43,6 +47,14 @@ export default function FutureSection() {
           </div>
         </div>
       </div>
+      
     </section>
+    <div className="container flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
+      <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+      <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
+        Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+      </div>
+    </div>
+    </div>
   );
 }
