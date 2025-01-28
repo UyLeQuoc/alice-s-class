@@ -25,25 +25,24 @@ export default function PopUpForm({ open, setOpen }: any) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxrnmm_H1u7kVQyt3-N_LNnLPoYo0pKpK8oYGc3b85_AOy5Fmx2nftnNAX1UvrutnIZug/exec";
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxzjtClMYfkcJRrgHl-AEFCRTeEq-2VHr8hXJbwIYgmkI7ds_ioPTKZ6-BPD7Dh_dJQnA/exec";
 
     try {
-      const formEncodedData = new URLSearchParams();
-      formEncodedData.append("name", formData.name);
-      formEncodedData.append("email", formData.email);
-      formEncodedData.append("phone", formData.phone);
-      formEncodedData.append("message", formData.message);
-
-      const response = await axios.post(scriptURL, formEncodedData, {
+      const response = await axios.post(scriptURL, formData, {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Type": "text/plain;charset=utf-8", // Avoid CORS preflight request
         },
       });
 
-      if (response.status === 200) {
+      const result = response.data;
+
+      console.log("Result:", result);
+
+      if (response.status === 200 && result.status === "success") {
         setFormData({ name: "", email: "", phone: "", message: "" });
-        setOpen(false); // Đóng PopUpForm
-        setSuccessDialogOpen(true); // Mở SuccessDialog
+        setOpen(false); // Close PopUpForm
+        setSuccessDialogOpen(true); // Open SuccessDialog
       } else {
         alert("Lỗi khi gửi, vui lòng thử lại.");
       }
@@ -69,16 +68,42 @@ export default function PopUpForm({ open, setOpen }: any) {
 
           <form className="mt-4 space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-2">
-              <Input name="name" placeholder="Tên của bạn" className="border-red-200 placeholder:text-gray-500" value={formData.name} onChange={handleChange} />
+              <Input
+                name="name"
+                placeholder="Tên của bạn"
+                className="border-red-200 placeholder:text-gray-500"
+                value={formData.name}
+                onChange={handleChange}
+              />
             </div>
             <div className="space-y-2">
-              <Input type="email" name="email" placeholder="Địa chỉ Email" className="border-red-200 placeholder:text-gray-500" value={formData.email} onChange={handleChange} />
+              <Input
+                type="email"
+                name="email"
+                placeholder="Địa chỉ Email"
+                className="border-red-200 placeholder:text-gray-500"
+                value={formData.email}
+                onChange={handleChange}
+              />
             </div>
             <div className="space-y-2">
-              <Input type="tel" name="phone" placeholder="Số điện thoại" className="border-red-200 placeholder:text-gray-500" value={formData.phone} onChange={handleChange} />
+              <Input
+                type="tel"
+                name="phone"
+                placeholder="Số điện thoại"
+                className="border-red-200 placeholder:text-gray-500"
+                value={formData.phone}
+                onChange={handleChange}
+              />
             </div>
             <div className="space-y-2">
-              <Textarea name="message" placeholder="Câu hỏi thêm (Nếu có)" className="min-h-[100px] border-red-200 placeholder:text-gray-500" value={formData.message} onChange={handleChange} />
+              <Textarea
+                name="message"
+                placeholder="Câu hỏi thêm (Nếu có)"
+                className="min-h-[100px] border-red-200 placeholder:text-gray-500"
+                value={formData.message}
+                onChange={handleChange}
+              />
             </div>
             <Button type="submit" className="w-full bg-red-700 text-white hover:bg-red-800">
               NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
