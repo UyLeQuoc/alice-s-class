@@ -149,8 +149,9 @@ export const FeedbackSection: React.FC = () => {
       <Image
         src="/assets/quote.jpg"
         alt="Background"
-        width={1000}
-        height={1000}
+        width={3000}
+        height={3000}
+        quality={100}
         className="object-cover w-full h-full absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
     </div>

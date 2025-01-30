@@ -29,8 +29,8 @@ export const AliceClassHeroSection: React.FC = () => {
           <Image
             src="/assets/person.png"
             alt="Alice's Class Founder"
-            width={500}
-            height={500}
+            width={2000}
+            height={2000}
             className="object-cover rounded-lg"
             quality={100}
           />
