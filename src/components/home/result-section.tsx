@@ -92,7 +92,7 @@ export const ResultSection: React.FC = () => {
                   alt={image.alt}
                   width={400}
                   height={400}
-                  className="rounded-lg object-cover w-full h-full"
+                  className="rounded-lg object-cover bg-red-400 w-full h-full aspect-[12/16]"
                 />
               </div>
             </SwiperSlide>

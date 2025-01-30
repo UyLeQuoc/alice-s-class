@@ -19,7 +19,7 @@ export const Header = () => {
         {/* Contact Section */}
         <div className="flex flex-col items-center md:flex-row md:items-center gap-4">
           <Image
-            src="/assets/icons/call.png"
+            src="/assets/icons/call.svg"
             alt="Call Icon"
             width={30}
             height={30}

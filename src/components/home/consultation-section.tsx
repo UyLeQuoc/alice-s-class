@@ -88,7 +88,7 @@ export interface ConsultationButtonProps {
             <div className="flex flex-col self-center mt-8 max-w-full text-base md:text-lg tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
               <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
               <div className="self-center mt-2.5 leading-6 md:leading-8 text-black text-[16px] md:text-[18px] italic font-bold">
-                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS <br /> và tự tin sử dụng tiếng Anh vào đời sống thường ngày
+                Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày
               </div>
             </div>
           </div>

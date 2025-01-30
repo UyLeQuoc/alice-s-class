@@ -28,23 +28,24 @@ export const TestimonialQuote: React.FC<TestimonialProps> = ({ quote, author, ac
 const testimonialData = [
   {
     quote:
-      "Ngày trước em cứ loay hoay mãi với IELTS, chật vật với con số 5.0. May sao em biết đến Alice's Class, chỉ 2 tháng thôi mà em lên hẳn 6.5. Thầy cô ở đây tận tâm lắm, chỉ bảo từng li từng tí, phương pháp học cũng hay nữa, giúp em sửa được mấy lỗi sai hay mắc, tự tin lên hẳn. Học ở Alice's Class thích lắm, không chỉ giỏi lên mà còn vui nữa, đi học mà lúc nào cũng thấy thoải mái, được động viên nhiều. Nhờ có thầy cô mà em không chỉ cải thiện được tiếng Anh mà còn có thêm động lực để thực hiện những dự định sắp tới.",
+      "Ngày trước em cứ loay hoay mãi với IELTS, chật vật với con số 5.0. May sao em biết đến Alice’s Class, chỉ 2 tháng thôi mà em lên hẳn 6.5. Thầy cô ở đây tận tâm lắm, chỉ bảo từng li từng tí, phương pháp học cũng hay nữa, giúp em sửa được mấy lỗi sai hay mắc, tự tin lên hẳn. Học ở Alice’s Class thích lắm, không chỉ giỏi lên mà còn vui nữa, đi học mà lúc nào cũng thấy thoải mái, được động viên nhiều. Nhờ có thầy cô mà em không chỉ cải thiện được tiếng Anh mà còn có thêm động lực để thực hiện những dự định sắp tới.",
     author: "Trung Kiên",
     achievement: "IELTS 6.5",
   },
   {
     quote:
-      "Alice's Class thực sự khác biệt. Em được hướng dẫn rất tỉ mỉ từng kỹ năng, từ cách viết đến cách nói. Nhờ có lộ trình học tập rõ ràng và phương pháp giảng dạy sáng tạo mà em đã đạt IELTS 7.0 chỉ trong 3 tháng. Em rất cảm kích sự tận tâm của thầy cô.",
-    author: "Minh Anh",
-    achievement: "IELTS 7.0",
+      "Trước đây, Tường nhà mình học IELTS ở một trung tâm khác, ròng rã 7 khóa liền mà điểm chỉ từ 3.0 lên được 3.5, chán nản lắm. Vợ chồng mình sốt ruột quá, quyết định cho con chuyển trung tâm. May mắn thế nào lại biết đến Alice’s Class, cho con vào học. Phải nói là thay đổi hẳn luôn! Chỉ sau 2 khóa luyện thi cấp tốc, con mình thi phát đạt luôn 6.0, đúng như mong ước của cả nhà. Mà không chỉ điểm số đâu, con thay đổi cả cách học, tự tin lên trông thấy, thấy tiến bộ thực sự ấy. Gia đình mình cảm ơn Alice’s Class, cảm ơn thầy cô và các anh chị nhân viên ở trung tâm nhiều lắm!",
+    author: "Phụ huynh của bạn Tường",
+    achievement: "IELTS 6.0",
   },
   {
     quote:
-      "Mình rất vui khi chọn Alice's Class. Không chỉ đạt mục tiêu IELTS 8.0 mà mình còn học được cách tư duy và sử dụng tiếng Anh tự nhiên hơn. Mỗi buổi học đều rất thú vị và bổ ích. Cảm ơn thầy cô rất nhiều!",
-    author: "Ngọc Hân",
-    achievement: "IELTS 8.0",
-  },
+      "Em xin chân thành cảm ơn cô Diễm, thầy Thông, chị Vy và trung tâm đã hỗ trợ em rất nhiệt tình trong suốt thời gian qua. Em nghĩ rằng để đạt được điểm số này chính là nhờ sự giúp đỡ rất nhiều từ quý thầy cô và trung tâm. Em không biết nói gì hơn ngoài lời cảm ơn, cùng lời chúc sức khỏe và thành công đến thầy cô. Em sẽ luôn trân quý khoảng thời gian vừa qua được đồng hành cùng mọi người ở Alice’s Class.",
+    author: "Mai Tấn Duy",
+    achievement: "IELTS 7.5",
+  }
 ];
+
 
 export const FeedbackSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
