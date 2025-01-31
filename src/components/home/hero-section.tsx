@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button"
 import { usePopUpStore } from "@/lib/popupStore"
 import Image from "next/image"
+import { CTAButton } from "../cta-button"
 
 export const HeroSection = () => {
-  const { openPopUp } = usePopUpStore()
-
   return (
     <section className="px-4 py-12 md:px-6 lg:px-8 relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
       <div>
@@ -29,10 +27,7 @@ export const HeroSection = () => {
           </div>
           <div className="flex flex-col gap-1 md:gap-2">
             <span className="text-white text-wrap text-[16px] sm:text-[18px] md:text-[24px] lg:text-[28px]">
-              Ngay Cả Khi Bạn Chưa Biết Từng Kỹ Năng
-            </span>
-            <span className="text-white text-wrap text-[16px] sm:text-[18px] md:text-[24px] lg:text-[28px] -mt-2">
-              Được Chấm Điểm Như Thế Nào
+              Mà Không Cần Cố Gắng Trả Lời Chính Xác Mọi Câu Hỏi
             </span>
           </div>
         </h1>
@@ -42,11 +37,9 @@ export const HeroSection = () => {
           Như Mong Muốn Nhanh Và Hiệu Quả
         </p>
 
-        <Button 
-          onClick={ openPopUp}
-        className="bg-[#C41E3A] px-4 sm:px-6 md:px-10 py-4 md:py-4 lg:py-8 text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white hover:bg-[#A01830] rounded-none w-full sm:w-auto">
-          NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ
-        </Button>
+       <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
+                 <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+               </div>
       </div>
     </section>
   )
