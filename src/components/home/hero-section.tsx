@@ -21,7 +21,7 @@ export const HeroSection = () => {
             <span className="text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px]">
               CÁCH ĐỂ ĐẠT ĐƯỢC BẤT KÌ BAND
             </span>
-            <span className="hidden md:block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] mt-2">
+            <span className=" text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] mt-2">
               ĐIỂM IETLS NÀO BẠN THÍCH...{" "}
             </span>
           </div>
