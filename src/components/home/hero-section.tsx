@@ -19,7 +19,7 @@ export const HeroSection = () => {
         <h1 className="mb-4 md:mb-6 text-xl font-bold leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl flex flex-col gap-4 md:gap-6">
           <div className="flex flex-col gap-1 md:gap-2">
           <span className="md:hidden block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px]">
-              CÁCH ĐỂ ĐẠT ĐƯỢC BẤT KÌ BANDĐIỂM IETLS NÀO BẠN THÍCH...
+              CÁCH ĐỂ ĐẠT ĐƯỢC BẤT KÌ BAND ĐIỂM IETLS NÀO BẠN THÍCH...
             </span>
 
             <span className="hidden md:block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px]">
