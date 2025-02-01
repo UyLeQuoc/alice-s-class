@@ -105,7 +105,7 @@ export const ContactFormSection: React.FC = () => {
         <div className="flex flex-col mt-10 max-w-full text-[16px] leading-8">
           <div className="flex flex-col w-full max-md:max-w-full">
             <div className="max-md:max-w-full">
-              Điền thông tin của bạn vào bên dưới ngay bây giờ và chuyên gia IELTS 9.0 sẽ hướng dẫn bạn cách để đạt điểm IELTS như mong muốn.
+              Điền thông tin của bạn vào bên dưới ngay bây giờ và chuyên gia IELTS 8.0 sẽ hướng dẫn bạn cách để đạt điểm IELTS như mong muốn.
               <br /><br />
               Trong buổi tư vấn, chúng tôi sẽ cùng trao đổi về mục tiêu, sở thích, hoạt động thường ngày và định hướng tương lai của bạn. Từ đó vạch ra được lộ trình, phương pháp nhanh chóng và hiệu quả nhất giúp bạn chinh phục mục tiêu.
               <br /><br />
