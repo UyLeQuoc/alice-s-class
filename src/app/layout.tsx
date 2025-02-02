@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
       <body className={`${interFont.className} antialiased`}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-0XM01YFQ85" />
     </html>
   );
 }
