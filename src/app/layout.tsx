@@ -57,7 +57,7 @@ export default function RootLayout({
       <body className={`${interFont.className} antialiased`}>
         {children}
       </body>
-      <GoogleAnalytics gaId="G-0XM01YFQ85" />
+      <GoogleAnalytics gaId="G-T07F8ZZ3EN" />
     </html>
   );
 }
