@@ -19,19 +19,19 @@ export const HeroSection = () => {
         <h1 className="mb-4 md:mb-6 text-xl font-bold leading-tight tracking-tight sm:text-2xl md:text-3xl lg:text-4xl flex flex-col gap-4 md:gap-6">
           <div className="flex flex-col gap-1 md:gap-2">
           <span className="md:hidden block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px]">
-              CÁCH ĐỂ ĐẠT ĐƯỢC BẤT KÌ BAND ĐIỂM IETLS NÀO BẠN THÍCH...
+              CÁCH ĐỂ ĐẠT 6.5 IETLS TRONG VÒNG 3 THÁNG...
             </span>
 
             <span className="hidden md:block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px]">
-              CÁCH ĐỂ ĐẠT ĐƯỢC BẤT KÌ BAND
+              CÁCH ĐỂ ĐẠT 6.5 IETLS TRONG
             </span>
             <span className="hidden md:block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] mt-2">
-              ĐIỂM IETLS NÀO BẠN THÍCH...{" "}
+             VÒNG 3 THÁNG...{" "}
             </span>
           </div>
           <div className="flex flex-col gap-1 md:gap-2">
             <span className="text-white text-wrap text-[16px] sm:text-[18px] md:text-[24px] lg:text-[28px]">
-              Mà Không Cần Cố Gắng Trả Lời Chính Xác Mọi Câu Hỏi
+              Mà Không Cần Phải Luyện Đề IELTS Mỗi Ngày
             </span>
           </div>
         </h1>
@@ -42,7 +42,7 @@ export const HeroSection = () => {
         </p>
 
        <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
-                 <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+                 <CTAButton text="NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC MIỄN PHÍ" />
                </div>
       </div>
     </section>

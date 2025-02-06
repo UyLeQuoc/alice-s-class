@@ -30,7 +30,7 @@ export default function FutureSection() {
 
         {/* Right column with text content */}
         <div className="space-y-8 lg:col-span-6">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#B62232] leading-tight">
+          <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold text-[#B62232] leading-tight">
             Cuộc Sống Của Bạn Sẽ Thế Nào Nếu Đạt Được Điểm IELTS Mong Muốn
           </h1>
           <div className="space-y-6 text-gray-700">
@@ -50,7 +50,7 @@ export default function FutureSection() {
       
     </section>
     <div className="container flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
-      <CTAButton text="NHẬN BUỔI TƯ VẤN CHIẾN LƯỢC MIỄN PHÍ" />
+      <CTAButton text="NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC MIỄN PHÍ" />
       <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
         Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày
       </div>
