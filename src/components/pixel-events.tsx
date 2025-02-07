@@ -1,20 +1,31 @@
 "use client";
-import React, { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
-import ReactPixel from "react-facebook-pixel";
 
-export const FacebookPixelEvents: React.FC = () => {
+import { usePathname } from "next/navigation";
+import Script from "next/script";
+import { useEffect, useState } from "react";
+import * as pixel from "./fpixel";
+
+const FacebookPixel = () => {
+  const [loaded, setLoaded] = useState(false);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    ReactPixel.init("996511195660551"); 
-    ReactPixel.pageView();
-  }, []);
+    if (!loaded) return;
 
-  useEffect(() => {
-    ReactPixel.pageView();
-  }, [pathname, searchParams]);
+    pixel.pageview();
+  }, [pathname, loaded]);
 
-  return null;
+  return (
+    <div>
+      <Script
+        id="fb-pixel"
+        src="/scripts/pixel.js"
+        strategy="afterInteractive"
+        onLoad={() => setLoaded(true)}
+        data-pixel-id={pixel.FB_PIXEL_ID}
+      />
+    </div>
+  );
 };
+
+export default FacebookPixel;

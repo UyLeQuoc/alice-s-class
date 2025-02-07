@@ -2,7 +2,7 @@
 
 import { usePopUpStore } from "@/lib/popupStore";
 import * as React from "react";
-import ReactPixel from "react-facebook-pixel";
+// import ReactPixel from "react-facebook-pixel";
 
 export interface CTAButtonProps {
   text: string;
@@ -15,9 +15,9 @@ export const CTAButton: React.FC<CTAButtonProps> = ({ text, className }) => {
   const handleClick = () => {
     openPopUp();
 
-    ReactPixel.track("CTA_Button_Clicked", {
-      buttonText: text,
-    });
+    // ReactPixel.track("CTA_Button_Clicked", {
+    //   buttonText: text,
+    // });
   };
 
   return (

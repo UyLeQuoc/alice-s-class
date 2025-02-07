@@ -1,10 +1,10 @@
+import FacebookPixel from "@/components/pixel-events";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import Head from "next/head";
-import { GoogleAnalytics } from '@next/third-parties/google'
 import { Suspense } from "react";
-import { FacebookPixelEvents } from "@/components/pixel-events";
+import "./globals.css";
 
 const interFont = Inter({
   subsets: ["latin"],
@@ -61,7 +61,7 @@ export default function RootLayout({
       </body>
       <GoogleAnalytics gaId="G-T07F8ZZ3EN" />
       <Suspense fallback={null}>
-        <FacebookPixelEvents />
+        <FacebookPixel />
       </Suspense>
     </html>
   );
