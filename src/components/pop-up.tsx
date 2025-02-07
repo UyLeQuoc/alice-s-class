@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { SuccessDialog } from "./success";
 import Image from "next/image";
+import ReactPixel from "react-facebook-pixel";
 
 export default function PopUpForm({ open, setOpen }: any) {
   const [formData, setFormData] = React.useState({
@@ -79,6 +80,10 @@ export default function PopUpForm({ open, setOpen }: any) {
         setFormData({ name: "", email: "", phone: "", message: "" });
         setOpen(false);
         setSuccessDialogOpen(true);
+
+        ReactPixel.track("Success", {
+          buttonText: "Success",
+        })
       } else {
         alert("Lỗi khi gửi, vui lòng thử lại.");
       }
