@@ -22,7 +22,7 @@ export const CTAButton: React.FC<CTAButtonProps> = ({ text, className }) => {
 
   return (
     <button
-      onClick={() => handleClick}
+      onClick={() => handleClick()}
       className={`gap-2.5 self-stretch px-12 py-5 w-full leading-none text-white bg-rose-700 max-md:px-5 max-md:max-w-full ${className}`}
       tabIndex={0}
     >
