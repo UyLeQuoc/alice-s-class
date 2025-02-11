@@ -129,7 +129,7 @@ export default function PopUpForm({ open, setOpen }: any) {
               <Textarea name="message" placeholder="Câu hỏi thêm (Nếu có)" className="pl-12 min-h-[100px] border-[#B62232] rounded-none" value={formData.message} onChange={handleChange} />
             </div>
             <Button type="submit" className="w-full bg-red-700 text-white hover:bg-red-800 rounded-none" disabled={loading}>
-              {loading ? "Đang gửi..." : "NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC MIỄN PHÍ"}
+              {loading ? "Đang gửi..." : "NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC"}
             </Button>
           </form>
         </DialogContent>
