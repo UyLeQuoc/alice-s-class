@@ -13,7 +13,7 @@ export default function ThankYouPage() {
           href="/" // Link back to the homepage
           className="px-6 py-3 bg-red-700 text-white rounded-md hover:bg-red-800 transition-colors"
         >
-          Quay lại Trang Chủ
+          Quay Lại Trang Chủ
         </a>
       </div>
     );
