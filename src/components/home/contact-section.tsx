@@ -1,7 +1,8 @@
 "use client"
 
+import ContactForm from '../ContactForm'; // <-- Import the NEW component
 import Image from "next/image";
-import { CTAButton } from "../cta-button";
+// import { CTAButton } from "../cta-button";
 
 export interface ContactItemProps {
     icon: string;
@@ -87,7 +88,7 @@ export const ContactFormSection: React.FC = () => {
   };
 
   return (
-    <div className="flex gap-2.5 justify-center items-center px-40 md:px-20 pt-20 pb-20 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
+    <div id="contact-section" className="flex gap-2.5 justify-center items-center px-40 md:px-20 pt-20 pb-20 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
       <div className="flex flex-col items-center self-stretch my-auto min-w-[240px] w-[700px]">
         <h1 className="self-stretch text-4xl font-bold tracking-tighter text-center max-md:max-w-full text-[#B62232]">
           Liên Hệ Ngay Để Được Tư Vấn Miễn Phí, Xây Dựng Lộ Trình Chinh Phục IELTS
@@ -125,8 +126,11 @@ export const ContactFormSection: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="mt-10 w-full max-w-2xl mx-auto"> {/* Added max-width and centered */}
+          <ContactForm />
+        </div>
         <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
-              <CTAButton text="NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC MIỄN PHÍ" />
+              {/* <CTAButton text="NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC MIỄN PHÍ" /> */}
               <div className="self-center mt-2.5 leading-8 text-black max-md:max-w-full text-[18px] md:text-[20px] italic font-bold">
                 Tìm hiểu cách bạn chắc chắn nâng được band điểm IELTS và tự tin sử dụng tiếng Anh vào đời sống thường ngày
               </div>

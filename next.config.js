@@ -1,6 +1,12 @@
 const nextConfig = {
-  images: {
-    domains: ["cdn.builder.io"],
+ images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.builder.io',
+        pathname: '**',
+      },
+    ],
   },
 };
 
