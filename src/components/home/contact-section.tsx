@@ -126,7 +126,7 @@ export const ContactFormSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-10 w-full max-w-2xl mx-auto"> {/* Added max-width and centered */}
+        <div className="mt-10 w-full max-w-full mx-auto"> {/* Added max-width and centered */}
           <ContactForm />
         </div>
         <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">

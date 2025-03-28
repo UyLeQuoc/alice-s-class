@@ -115,28 +115,28 @@ export default function ContactForm() {
       <form className="space-y-4 bg-white w-full" onSubmit={handleSubmit}>
         <div className="relative">
           <Image src="/assets/icons/person.svg" alt="Person" width={20} height={20} className="absolute top-1/2 left-3 transform -translate-y-1/2" />
-          <Input name="name" placeholder="Tên của bạn" className="pl-10 border-[#B62232] h-12" value={formData.name} onChange={handleChange} />
+          <Input name="name" placeholder="Tên của bạn" className="pl-12 border-[#B62232] rounded-none" value={formData.name} onChange={handleChange} />
            {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
         </div>
 
         <div className="relative">
           <Image src="/assets/icons/closed.svg" alt="Email" width={20} height={20} className="absolute top-1/2 left-3 transform -translate-y-1/2" />
-          <Input type="email" name="email" placeholder="Địa chỉ Email" className="pl-10 border-[#B62232] rounded-md h-12" value={formData.email} onChange={handleChange} />
+          <Input type="email" name="email" placeholder="Địa chỉ Email" className="pl-12 border-[#B62232] rounded-none" value={formData.email} onChange={handleChange} />
            {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
         </div>
 
         <div className="relative">
           <Image src="/assets/icons/call.svg" alt="Phone" width={20} height={20} className="absolute top-1/2 left-3 transform -translate-y-1/2" />
-          <Input type="tel" name="phone" placeholder="Số điện thoại" className="pl-10 border-[#B62232] rounded-md h-12" value={formData.phone} onChange={handleChange} />
+          <Input type="tel" name="phone" placeholder="Số điện thoại" className="pl-12 border-[#B62232] rounded-none" value={formData.phone} onChange={handleChange} />
            {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
         </div>
 
         <div className="relative">
           <Image src="/assets/icons/comment.svg" alt="Message" width={20} height={20} className="absolute top-5 left-3 transform -translate-y-1/2" />
-          <Textarea name="message" placeholder="Câu hỏi thêm (Nếu có)" className="pl-10 min-h-[100px] border-[#B62232] rounded-md" value={formData.message} onChange={handleChange} />
+          <Textarea name="message" placeholder="Câu hỏi thêm (Nếu có)" className="pl-12 min-h-[100px] border-[#B62232] rounded-none" value={formData.message} onChange={handleChange} />
         </div>
 
-        <Button type="submit" className="w-full bg-red-700 text-white hover:bg-red-800 rounded-md h-12 text-lg font-semibold" disabled={loading}>
+        <Button type="submit" className="w-full bg-red-700 text-white hover:bg-red-800 rounded-none h-12 text-lg font-semibold" disabled={loading}>
           {loading ? (
              <span className="loader mr-2"></span> /* Simple loader */
            ) : (
