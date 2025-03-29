@@ -13,12 +13,6 @@ export const CTAButton: React.FC<CTAButtonProps> = ({ text, className }) => {
   const { openPopUp } = usePopUpStore();
 
   const handleClick = () => {
-    // openPopUp();
-
-    // ReactPixel.track("CTA_Button_Clicked", {
-    //   buttonText: text,
-    // });
-
 
     // Then, scroll to the contact section
     const contactSection = document.getElementById('contact-section');

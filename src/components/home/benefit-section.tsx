@@ -72,7 +72,7 @@ export function BenefitSection() {
     <div className="relative flex flex-col justify-center items-center py-16 px-6 sm:px-10 lg:px-32 bg-orange-50 overflow-hidden">
       {/* Header Text */}
       <div className="text-3xl md:text-4xl font-bold text-center text-rose-700 capitalize max-w-2xl">
-        Đây Là Tóm Tắt Những Gì Bạn Sẽ Nhận Được Trong Buổi Tư Vấn Miễn Phí...
+        Đây Là Tóm Tắt Những Gì Bạn Sẽ Nhận Được Trong Buổi Tư Vấn...
       </div>
 
       {/* Benefit Sections */}

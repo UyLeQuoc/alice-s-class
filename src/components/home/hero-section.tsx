@@ -1,5 +1,6 @@
 import { usePopUpStore } from "@/lib/popupStore"
 import Image from "next/image"
+import { GoogleRatingDisplay } from '@/components/GoogleRatingDisplay'; // Adjust path if needed
 import { CTAButton } from "../cta-button"
 
 export const HeroSection = () => {
@@ -44,6 +45,15 @@ export const HeroSection = () => {
        <div className="flex flex-col self-center mt-8 max-w-full text-lg md:text-2xl tracking-tight text-center w-full lg:w-[700px] max-md:mt-10">
                  <CTAButton text="NHẬN BUỔI TƯ VẤN LỘ TRÌNH HỌC MIỄN PHÍ" />
                </div>
+
+        <div className="mt-4 flex justify-center"> {/* Centers the rating display */}
+          <GoogleRatingDisplay
+            rating={5} // <-- Put your actual rating here
+            reviewCount={18} // <-- Put your actual review count here
+            googleMapsUrl="https://maps.app.goo.gl/1DohPwA8fZxFWk3Y7" // <-- Optional: Put URL here
+          />
+        </div>
+
       </div>
     </section>
   )

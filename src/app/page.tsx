@@ -5,6 +5,7 @@ import { AliceClassHeroSection } from "@/components/home/alice-class-hero-sectio
 import { BenefitSection } from "@/components/home/benefit-section";
 import { ConsultationSection } from "@/components/home/consultation-section";
 import { ContactFormSection } from "@/components/home/contact-section";
+import { ContactForm } from "@/components/home/ContactForm"
 import {FeedbackSection} from "@/components/home/feedback-section";
 import FutureSection from "@/components/home/future-section";
 import { HeroSection } from "@/components/home/hero-section";
@@ -30,6 +31,7 @@ export default function Home() {
         <FeedbackSection />
         <FutureSection />
         <ContactFormSection />
+        <ContactForm />
 
         <Image
           src="/assets/footer.jpg"
