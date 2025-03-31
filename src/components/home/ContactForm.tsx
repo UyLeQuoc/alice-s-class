@@ -130,7 +130,7 @@ export function ContactForm() {
             <Input 
               type="tel" 
               name="phone" 
-              placeholder="Số điện thoại" 
+              placeholder="Số điện thoại (Chúng tôi sẽ nhắn tin qua Zalo chứ không gọi điện)" 
               className="pl-12 border-[#B62232] rounded-none py-6" 
               value={formData.phone} 
               onChange={handleChange} 
