@@ -17,13 +17,11 @@ export const HeroSection = () => {
         />
       </div>
       <div className="mx-auto text-center max-w-[90vw]">
-        <p className="mx-auto mb-8 md:mb-12 max-w-full text-[12px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-white mt-6 md:mt-10">
+        <p className="mx-auto mb-8 md:mb-12 max-w-full text-[12px] sm:text-[16px] md:text-[18px] lg:text-[16px] text-white mt-6 md:mt-10">
           HOANG MANG VÌ HỌC IELTS MÃI KHÔNG TIẾN BỘ MÀ DEADLINE NGÀY CÀNG GẦN?
         </p>
-        <h1 className="mb-4 md:mb-6 text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl flex flex-col gap-4 md:gap-6">
-          <span className="hidden:md md:block text-white text-wrap text-[24px] sm:text-[28px] md:text-[36px] lg:text-[48px] max-w-4xl">
+        <h1 className="mb-4 md:mb-6 text-[24px] text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl flex flex-col gap-4 md:gap-6 text-white max-w-4xl">
           “Em Từng Rất Áp Lực Vì Hạn Nộp Hồ Sơ Chỉ Còn 5 Tháng Nhưng Lại Chưa Từng Học IELTS... Bây Giờ Em Đã Có 6.5 IELTS, Đậu Trường Mình Mơ Ước… Chỉ Trong 3 Tháng, Dù Lúc Đó Em Chỉ Có Thể Học IELTS 2 Tiếng/Ngày"
-          </span>
         </h1>
         <p className="mx-auto mb-8 md:mb-12 max-w-3xl text-[12px] sm:text-[16px] md:text-[18px] lg:text-[22px] text-white mt-6 md:mt-10 text-wrap">
           Bạn có thể đạt được bất kỳ band IELTS nào nhờ vào việc biết điểm yếu của mình. Nhận buổi tư vấn miễn phí cùng Founder Ngọc Diễm và khám phá cách bạn có thể chinh phục band điểm IELTS mong muốn.
