@@ -89,9 +89,9 @@ export function ContactForm() {
   };
 
   return (
-    <div className="flex gap-2.5 justify-center items-center px-40 md:px-20 pt-20 pb-20 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
+    <div id="contact-section" className="flex gap-2.5 justify-center items-center px-40 md:px-20 pt-20 pb-20 mt-0 text-2xl tracking-tight text-black bg-white max-md:px-5 max-md:pb-24">
       <div className="flex flex-col items-center self-stretch my-auto min-w-[240px] w-[700px]">      
-        <h1 id="contact-section" className="text-4xl font-bold tracking-tighter text-center mb-16 text-[#B62232] max-w-4xl">
+        <h1 className="text-4xl font-bold tracking-tighter text-center mb-16 text-[#B62232] max-w-4xl">
           Nhận Lộ Trình Và Phương Pháp Học Giúp Bạn Đạt 6.5 IELTS
         </h1>
       <form className="space-y-4 bg-white w-full" onSubmit={handleSubmit}>
