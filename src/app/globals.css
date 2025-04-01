@@ -122,3 +122,42 @@ body {
     transform: rotate(360deg);
   }
 }
+
+/* --- Custom Swiper Control Styling (for new container) --- */
+/* Ensure pagination dots use theme color */
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background-color: #B62232 !important; /* Theme red for active dot */
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  background-color: #d1d5db; /* Gray for inactive dots */
+  opacity: 1; /* Ensure inactive are fully visible */
+}
+
+.swiper-pagination-custom {
+  text-align: center; /* Centers the inline-block dots within this div */
+  flex-grow: 1; /* Optional: Allow pagination to take available space */
+}
+
+/* Hide default absolute positioned elements IF they still appear */
+/* You might not need these if Swiper behaves correctly with el/nextEl/prevEl */
+/*
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+*/
+
+/* Optional: Hide the original absolute positioned elements if they somehow reappear */
+/*
+.mySwiper > .swiper-button-next,
+.mySwiper > .swiper-button-prev,
+.mySwiper > .swiper-pagination-bullets {
+  display: none !important;
+}
+*/
+
+
+/* --- End Custom Swiper Control Styling --- */
