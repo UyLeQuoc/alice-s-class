@@ -37,10 +37,10 @@ const images: ImageProps[] = [
     src: "https://cdn.builder.io/api/v1/image/assets/TEMP/a5ca6454729407c0f505087477a4beb24808aeba92048eb9e8346c5584061b02?apiKey=7ed9c1bb2a694ebca97c186157446de0&",
     alt: "Student achievement testimonial 5",
   },
-  // {
-  //   src: "https://www.alicesclass.com/assets/ielts-certificates/Nhu_Y_7.5.png",
-  //   alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
-  // },
+  {
+    src: "/assets/ielts-certificates/Nhu_Y_7.5.png",
+    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+  },
 ];
 
 export const ResultSection: React.FC = () => {
