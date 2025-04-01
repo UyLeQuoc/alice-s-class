@@ -34,7 +34,7 @@ export const HeroSection = () => {
         <div className="mt-4 flex justify-center"> {/* Centers the rating display */}
           <GoogleRatingDisplay
             rating={5} // <-- Put your actual rating here
-            reviewCount={18} // <-- Put your actual review count here
+            reviewCount={28} // <-- Put your actual review count here
             googleMapsUrl="https://maps.app.goo.gl/1DohPwA8fZxFWk3Y7" // <-- Optional: Put URL here
           />
         </div>
