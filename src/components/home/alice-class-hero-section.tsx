@@ -12,10 +12,10 @@ export const AliceClassHeroSection: React.FC = () => {
               Đạt Điểm IELTS Như Ý Muốn Trong Thời Gian Ngắn Cùng Alice&apos;s Class
             </div>
             <div className="mt-8 text-[16px] tracking-tight leading-8">
-              Bạn muốn đạt band IELTS đủ với yêu cầu của trường? Loay hoay không biết bắt đầu học từ đâu, áp lực vì sợ không đủ thời gian? Dù đã vào các trung tâm để học nhưng điểm số vẫn không tiến triển, thậm chí tệ đi? Tôi là Đỗ Thị Ngọc Diễm, và trung tâm Alice’s Class của tôi đã giúp 100% học viên nâng band và đạt điểm IELTS như kỳ vọng.
+              Bạn muốn đạt band IELTS đủ với yêu cầu của trường? Loay hoay không biết bắt đầu học từ đâu, áp lực vì sợ không đủ thời gian? Dù đã vào các trung tâm để học nhưng điểm số vẫn không tiến triển, thậm chí tệ đi? Vậy thì bạn đã đến đúng nơi, đây là lý do:
               <br />
               <br />
-              Chúng tôi làm được điều này nhờ phương pháp giảng dạy tận tâm, lắng nghe và lộ trình học được thiết kế riêng cho từng học viên. Điều này giúp học viên nhận ra điểm yếu để tập trung cải thiện, từ đó bứt phá tiếng Anh hiệu quả và đạt được điểm số mong muốn.
+              Tôi là Đỗ Thị Ngọc Diễm, và trung tâm Alice’s Class của tôi đã phát triển một phương pháp giúp quá trình phát triển tiếng Anh trở nên nhanh chóng và ứng dụng lâu dài. Bằng cách giảng dạy dựa trên những gì học viên thực sự cần thay vì chỉ dạy kỹ thuật, Alice’ Class đã giúp 100% học viên đạt điểm IELTS như kỳ vọng đúng (và cả sớm hơn) thời gian dự kiến.
             </div>
           </div>
         </div>
