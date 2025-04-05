@@ -33,7 +33,7 @@ export interface ConsultationButtonProps {
     return (
       <div className="flex flex-col w-full text-black max-md:w-full items-center justify-center">
         <div className="text-[28px] md:text-[36px] text-[#B62232] font-bold tracking-tighter text-center leading-[36px] md:leading-[48px] w-full lg:w-[60%]">
-          Chiến Lược Khác Biệt Giúp Bạn Thành Công Đạt Điểm IELTS Như Ý
+          Student Tracking System… Hệ Thống Giúp Khả Năng Đạt Điểm IELTS Kỳ Vọng Gần Như Tuyệt Đối
         </div>
         <div className="w-full flex items-center justify-center mt-8">
           <Image
