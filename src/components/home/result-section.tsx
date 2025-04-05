@@ -48,6 +48,31 @@ const images: ImageProps[] = [
     alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
     ieltsScore: 7.5,
   },
+  {
+    src: "/assets/ielts-certificates/Thuy_Nga_7.png",
+    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    ieltsScore: 7.0,
+  },
+  {
+    src: "/assets/ielts-certificates/Phuong_Anh_5.5.png",
+    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    ieltsScore: 5.5,
+  },
+  {
+    src: "/assets/ielts-certificates/Huyen_Anh_6.png",
+    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    ieltsScore: 6.0,
+  },
+  {
+    src: "/assets/ielts-certificates/dinh_hieu_7.png",
+    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    ieltsScore: 7.0,
+  },
+  {
+    src: "/assets/ielts-certificates/anh_thu_6.png",
+    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    ieltsScore: 6.0,
+  },
 ];
 
 export const ResultSection: React.FC = () => {
