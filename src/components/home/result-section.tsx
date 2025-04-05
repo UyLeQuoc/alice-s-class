@@ -45,32 +45,32 @@ const images: ImageProps[] = [
   },
   {
     src: "/assets/ielts-certificates/Nhu_Y_7.5.png",
-    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    alt: "Student achievement testimonial 6",
     ieltsScore: 7.5,
   },
   {
     src: "/assets/ielts-certificates/Thuy_Nga_7.png",
-    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    alt: "Student achievement testimonial 7",
     ieltsScore: 7.0,
   },
   {
     src: "/assets/ielts-certificates/Phuong_Anh_5.5.png",
-    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    alt: "Student achievement testimonial 8",
     ieltsScore: 5.5,
   },
   {
     src: "/assets/ielts-certificates/huyen_anh_6.png",
-    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    alt: "Student achievement testimonial 9",
     ieltsScore: 6.0,
   },
   {
     src: "/assets/ielts-certificates/dinh_hieu_7.png",
-    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    alt: "Student achievement testimonial 10",
     ieltsScore: 7.0,
   },
   {
     src: "/assets/ielts-certificates/anh_thu_6.png",
-    alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
+    alt: "Student achievement testimonial 11",
     ieltsScore: 6.0,
   },
 ];
