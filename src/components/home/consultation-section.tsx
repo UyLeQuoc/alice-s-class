@@ -65,14 +65,14 @@ export interface ConsultationButtonProps {
 
   export const ConsultationSection: React.FC = () => {
     const content = {
-      title: "Chiến Lược Khác Biệt Giúp Bạn Thành Công Đạt Điểm IELTS Như Ý",
+      title: "Student Tracking System… Hệ Thống Giúp Khả Năng Đạt Điểm IELTS Kỳ Vọng Gần Như Tuyệt Đối",
       description: [
-        `Chìa khóa để đạt điểm IELTS như ý chính là lộ trình học được cá nhân hóa, tập trung vào điểm yếu và liên tục chiêm nghiệm để cải thiện. Thiếu điều này, bạn dễ lãng phí thời gian và công sức. Đáng tiếc, rất nhiều người lại đang gặp tình trạng này khi áp dụng những phương pháp học thiếu cá nhân hóa, không phù hợp với năng lực bản thân.`,
-        `Chúng tôi giúp bạn xây dựng nền tảng vững chắc bằng cách phát triển toàn diện 4 kỹ năng qua các chủ đề thực tế và luyện tập áp dụng tiếng Anh vào đời sống. Điểm khác biệt tạo nên sự đột phá của chúng tôi chính là Tracking System: Theo dõi chi tiết tiến độ của bản thân, từ đó điều chỉnh lộ trình học tức thời, giúp bạn tối ưu thời gian, tập trung khắc phục điểm yếu và chinh phục IELTS hiệu quả.`,
+        `Sau hơn 2 năm giảng dạy, chúng tôi nhận thấy rằng chìa khóa để đạt điểm IELTS như ý chính là lộ trình và phương pháp học được thiết kế dựa trên một mục tiêu: Để cải thiện các điểm yếu hiện tại. Thiếu điều này, bạn dễ lãng phí thời gian và công sức vì liên tục lặp lại các lỗi sai. Nhưng đáng tiếc, rất nhiều người lại không hề biết điểm yếu của mình ở đâu.`,
+        `Nhận ra điều ấy, Alice’s Class đã tập trung phát triển hệ thống giúp theo dõi chi tiết tiến độ của học viên mang tên “Student Tracking System”. Nhờ những số liệu có được, đội ngũ giảng viên và cả học viên có thể nhìn thấy rõ ràng các điểm yếu, những kỹ năng nào đã phát triển và đâu là những việc nên làm tiếp theo. Từ đó tối ưu thời gian, học tập hiệu quả và loại bỏ toàn bộ sự lo lắng vì biết chính xác những gì mình cần làm tiếp theo.`,
       ],
       bold: [
-        "Đáng tiếc",
-        "Tracking System: Theo dõi chi tiết tiến độ của bản thân",
+        "Nhưng đáng tiếc",
+        "“Student Tracking System”",
       ],
     };
   
