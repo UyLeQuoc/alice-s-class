@@ -59,7 +59,7 @@ const images: ImageProps[] = [
     ieltsScore: 5.5,
   },
   {
-    src: "/assets/ielts-certificates/Huyen_Anh_6.png",
+    src: "/assets/ielts-certificates/huyen_anh_6.png",
     alt: "Alice’s Class - Tư vấn chiến lược miễn phí",
     ieltsScore: 6.0,
   },
