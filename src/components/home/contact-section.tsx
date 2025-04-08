@@ -73,7 +73,7 @@ const contactItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/bac92ce903602a5c78a807495b4aecd619626bc3e2acd7527b117782b6ad77a8?apiKey=7ed9c1bb2a694ebca97c186157446de0&", 
     title: 'Bạn có thể kể tên 4 trong số 5 yếu tố "ghi điểm" với giám khảo IELTS?',
-    description: 'Chúng tôi sẽ tiết lộ 5 tiêu chí mà giám khảo IELTS luôn tìm kiếm ở các thí sinh, giúp bạn chuẩn bị tốt nhất cho bài thi và đạt kết quả cao nhất.'
+    description: 'Chúng tôi sẽ tiết lộ 5 tiêu chí mà giám khảo IELTS luôn tìm kiếm ở các thí sinh, giúp bạn chuẩn bị tốt nhất cho bài thi và đạt kết quả cao nhất'
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/bac92ce903602a5c78a807495b4aecd619626bc3e2acd7527b117782b6ad77a8?apiKey=7ed9c1bb2a694ebca97c186157446de0&",

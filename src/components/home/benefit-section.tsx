@@ -55,7 +55,7 @@ export function BenefitSection() {
       title:
         "Chiến Lược Làm Bài Giúp Bạn Bứt Phá Từng Kỹ Năng Mà Nhiều Trung Tâm Không Muốn Tiết Lộ Với Bạn",
       description:
-        "Chuyên gia 8.0 IELTS sẽ chia sẻ chiến lược làm bài hiệu quả cho từng phần thi, cách tối ưu hóa điểm số dựa trên điểm mạnh của bạn và phương pháp luyện tập chuyên sâu để khắc phục điểm yếu.",
+        "Chuyên gia 8.0 IELTS sẽ chia sẻ chiến lược làm bài hiệu quả cho từng phần thi, cách tối ưu hóa điểm số dựa trên điểm mạnh của bạn và phương pháp luyện tập chuyên sâu để khắc phục điểm yếu",
       imgSrc: "/assets/icons/black-checkbox.svg",
       imgAlt: "Icon showing exam strategies"
     },
