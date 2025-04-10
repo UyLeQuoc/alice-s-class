@@ -120,9 +120,9 @@ export const ContactFormSection: React.FC = () => {
           <div className="mt-10 max-md:max-w-full text-[16px] leading-8">
             <span className="font-bold">Tại sao chúng tôi lại tư vấn miễn phí?</span> Đơn giản vì chúng tôi tin rằng, khi bạn hiểu rõ giá trị của Alice's Class, bạn sẽ muốn đồng hành cùng chúng tôi trên hành trình chinh phục IELTS. Nếu không, cũng không sao cả! Dù lựa chọn của bạn thế nào, chúng tôi vẫn mong muốn được chia sẻ kiến thức, giúp các bạn học sinh, sinh viên hiểu rõ hơn về IELTS và định hướng học tập đúng đắn.
             <br /><br />
-            Và chúng tôi rất tiếc phải chia sẻ rằng số lượng buổi tư vấn rất hạn chế. Do lịch trình bận rộn, chúng tôi chỉ có thể dành thời gian cho 20 cuộc hẹn mỗi tháng.
+            Và chúng tôi rất tiếc phải chia sẻ rằng số lượng buổi tư vấn rất hạn chế. Do lịch trình bận rộn, chúng tôi chỉ có thể dành thời gian cho 10 cuộc gọi mỗi tháng.
             <br /><br />
-            Nên nếu bạn không may là người thứ 21, bạn sẽ phải vào danh sách chờ cho đến khi có thêm chỗ trống. Cho nên hãy điền thông tin của bạn bên dưới để chúng tôi liên hệ ngay khi có thể.
+            Nên nếu bạn không may là người thứ 11, bạn sẽ phải vào danh sách chờ cho đến khi có thêm chỗ trống. Cho nên hãy điền thông tin của bạn bên dưới để chúng tôi liên hệ ngay khi có thể nhé.
           </div>
         </div>
       </div>
