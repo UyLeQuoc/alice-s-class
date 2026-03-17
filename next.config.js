@@ -1,5 +1,5 @@
 const nextConfig = {
- images: {
+  images: {
     remotePatterns: [
       {
         protocol: 'https',
@@ -7,6 +7,16 @@ const nextConfig = {
         pathname: '**',
       },
     ],
+  },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/',
+          destination: '/landing.html',
+        },
+      ],
+    };
   },
 };
 
