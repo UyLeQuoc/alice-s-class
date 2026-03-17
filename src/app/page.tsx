@@ -10,14 +10,25 @@ export default function Page() {
         fetch('/landing.html')
             .then((res) => res.text())
             .then((text) => {
-                // We strip the script tags out of the HTML to prevent React from complaining,
-                // and because they wouldn't execute anyway.
+                let combinedHtml = '';
+
+                // Extract style tags from head
+                const headMatch = text.match(/<head[^>]*>([\s\S]*)<\/head>/i);
+                if (headMatch) {
+                    const stylesMatch = headMatch[1].match(/<style[^>]*>[\s\S]*?<\/style>/gi);
+                    if (stylesMatch) {
+                        combinedHtml += stylesMatch.join('\n');
+                    }
+                }
+
+                // Extract body content and strip scripts
                 const bodyContentMatch = text.match(/<body[^>]*>([\s\S]*)<\/body>/i);
                 if (bodyContentMatch) {
-                    // Remove the raw script block completely from the HTML string
                     const htmlWithoutScripts = bodyContentMatch[1].replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-                    setHtmlContent(htmlWithoutScripts);
+                    combinedHtml += htmlWithoutScripts;
                 }
+
+                setHtmlContent(combinedHtml);
             });
     }, []);
 
