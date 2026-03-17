@@ -188,7 +188,7 @@ export default function Page() {
 
     return (
         <div
-            className="fixed inset-0 z-[9999] bg-[#FEFCFA] overflow-auto landing-page-container"
+            className="fixed inset-0 z-[9999] bg-[#FEFCFA] overflow-auto landing-page-container scroll-smooth"
             dangerouslySetInnerHTML={{ __html: htmlContent }}
         />
     );
