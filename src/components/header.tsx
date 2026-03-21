@@ -8,10 +8,11 @@ export const Header = () => {
         {/* Logo */}
         <div className="mb-4 md:mb-0 flex-shrink-0">
           <Image
-            src="/assets/logo.svg"
+            src="/assets/logo-alice.png"
             alt="Logo"
             width={180}
             height={50}
+            unoptimized={true}
             className="w-[120px] md:w-[180px] h-auto"
           />
         </div>
