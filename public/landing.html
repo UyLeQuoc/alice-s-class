@@ -74,8 +74,10 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 5% 60px;
-    background: var(--cream);
+    padding: 120px 5% 40px;
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=2671');
+    background-size: cover;
+    background-position: center right;
     position: relative;
     overflow: hidden;
   }
@@ -83,43 +85,51 @@
   .hero::before {
     content: '';
     position: absolute;
-    top: -120px; right: -120px;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,16,46,0.07) 0%, transparent 70%);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0.92) 42%, rgba(255,255,255,0) 100%);
     pointer-events: none;
+    z-index: 1;
   }
 
   .hero::after {
-    content: '"';
-    position: absolute;
-    bottom: -60px; right: 4%;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28rem;
-    color: rgba(200,16,46,0.04);
-    line-height: 1;
-    pointer-events: none;
-    font-weight: 700;
+    display: none;
   }
 
-  .hero-inner {
-    max-width: 780px;
+  .hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
     animation: fadeUp 0.9s ease both;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 700px;
   }
 
   .hero-tag {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--red-light);
+    background: #ebcdd4;
     color: var(--red);
     font-size: 0.78rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 6px 14px;
     border-radius: 50px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+    align-self: flex-start;
   }
   .hero-tag::before {
     content: '';
@@ -131,11 +141,11 @@
 
   .hero h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    font-weight: 600;
-    line-height: 1.2;
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    font-weight: 700;
+    line-height: 1.15;
     color: var(--charcoal);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .hero h1 em {
@@ -145,11 +155,11 @@
 
   .hero-sub {
     font-size: 1.05rem;
-    color: var(--mid);
-    line-height: 1.8;
+    color: var(--charcoal);
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 32px;
     max-width: 600px;
-    margin-bottom: 40px;
-    font-weight: 400;
   }
 
   .hero-cta-group {
@@ -157,7 +167,6 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 48px;
   }
 
   .btn-primary {
@@ -172,25 +181,25 @@
     align-items: center;
     gap: 10px;
     transition: all 0.25s;
-    box-shadow: 0 8px 32px rgba(200,16,46,0.25);
+    box-shadow: 0 8px 32px rgba(200,16,46,0.3);
   }
   .btn-primary:hover {
     background: var(--red-dark);
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(200,16,46,0.35);
+    box-shadow: 0 12px 40px rgba(200,16,46,0.4);
   }
   .btn-primary svg { transition: transform 0.2s; }
   .btn-primary:hover svg { transform: translateX(4px); }
 
   .btn-ghost {
-    color: var(--mid);
-    font-size: 0.88rem;
-    font-weight: 500;
+    color: var(--charcoal);
+    font-size: 0.9rem;
+    font-weight: 600;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--charcoal);
     padding-bottom: 2px;
     transition: color 0.2s, border-color 0.2s;
   }
@@ -198,25 +207,61 @@
 
   .hero-stats {
     display: flex;
-    gap: 32px;
+    gap: 24px;
     flex-wrap: wrap;
-    padding-top: 36px;
-    border-top: 1px solid var(--border);
+    justify-content: space-between;
+    padding: 32px 48px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    margin-top: 80px;
   }
 
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--charcoal);
+    margin-bottom: 6px;
+  }
+  .stat-icon {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
     color: var(--red);
-    line-height: 1;
-    margin-bottom: 4px;
   }
   .stat-label {
-    font-size: 0.78rem;
-    color: var(--soft);
-    font-weight: 500;
+    font-size: 0.82rem;
+    color: var(--charcoal);
+    font-weight: 600;
     line-height: 1.4;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+    .hero::before {
+      background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0.4) 100%);
+    }
+    .hero h1 span {
+      white-space: normal !important;
+    }
+    .hero-stats {
+      padding: 24px;
+      gap: 20px;
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    .stat-num {
+      font-size: 1.25rem;
+    }
   }
 
   /* ─── SECTION BASE ─── */
@@ -1014,7 +1059,118 @@
     .pain-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .roadmap-track::before { left: 20px; }
     .step-dot { min-width: 42px; height: 42px; }
+    .step-meta { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .step-level { white-space: normal; text-align: left; line-height: 1.4; }
+    .d-none-mobile { display: none; }
+    .d-block-mobile { display: block; margin-top: 2px; color: var(--red); font-weight: 600; }
     .form-card { padding: 32px 24px; }
+    .score-pill:nth-child(n+6) { display: none !important; }
+    .proof-scores.expanded .score-pill:nth-child(n+6) { display: flex !important; }
+    .proof-more { display: flex; justify-content: center; margin-top: 16px; width: 100%; }
+  }
+  @media (min-width: 769px) {
+    .proof-more { display: none !important; }
+  }
+
+  /* ─── FOOTER STRUCTURE ─── */
+  .site-footer {
+    background-color: var(--bg);
+    border-top: 1px solid var(--border);
+    padding: 60px 5% 100px 5%;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: left;
+  }
+  .footer-locations h4, .footer-info h4 {
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: var(--charcoal);
+  }
+  .footer-locations ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-locations li {
+    margin-bottom: 4px;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+  .footer-logo {
+    height: 60px;
+    width: auto;
+    margin-bottom: 20px;
+  }
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+  }
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid var(--charcoal);
+    border-radius: 8px;
+    color: var(--charcoal);
+    transition: all 0.2s;
+  }
+  .social-icon:hover {
+    background: var(--charcoal);
+    color: #fff;
+  }
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .footer-info p {
+    color: var(--mid);
+    margin: 0;
+  }
+  .footer-bottom {
+    margin-top: 8px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--soft);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .footer-bottom a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  @media (min-width: 768px) {
+    .footer-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-locations, .footer-info {
+      flex: 1 1 30%;
+    }
+    .footer-brand, .footer-socials {
+      flex: 1 1 100%;
+    }
+    .footer-bottom {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 
   /* ─── DIVIDERS ─── */
@@ -1074,44 +1230,58 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-tag">Trung tâm IELTS tại Thủ Đức, HCM</div>
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-tag">Trung tâm IELTS tại Thủ Đức, HCM</div>
 
-    <h1>
-      Bạn không thiếu cố gắng.<br>
-      Bạn chỉ chưa có<br>
-      <em>đúng lộ trình cho mình.</em>
-    </h1>
+      <h1>
+        <span style="white-space: nowrap">Bạn không thiếu cố gắng.</span><br>
+        <span style="white-space: nowrap">Bạn chỉ chưa có</span><br>
+        <em>đúng lộ trình cho mình.</em>
+      </h1>
 
-    <p class="hero-sub">
-      Rất nhiều bạn học IELTS mà cảm giác cứ xoay vòng mãi — làm đề, học từ vựng, rồi lại quên, rồi lại làm. Không phải bạn kém. Là bạn chưa được ai ngồi xuống, nhìn vào đúng điểm yếu của bạn, và chỉ cho bạn cần làm gì tiếp theo.
-    </p>
+      <p class="hero-sub">
+        Rất nhiều bạn học IELTS mà cảm giác cứ xoay vòng mãi — làm đề, học từ vựng, rồi lại quên, rồi lại làm. Không phải bạn kém. Là bạn chưa được ai ngồi xuống, nhìn vào đúng điểm yếu của bạn, và chỉ cho bạn cần làm gì tiếp theo.
+      </p>
 
-    <div class="hero-cta-group">
-      <a href="#tu-van" class="btn-primary">
-        Nhận tư vấn lộ trình miễn phí
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <a href="#lo-trinh" class="btn-ghost">Xem lộ trình học →</a>
+      <div class="hero-cta-group">
+        <a href="#tu-van" class="btn-primary">
+          Nhận tư vấn lộ trình miễn phí
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#lo-trinh" class="btn-ghost">Xem lộ trình học →</a>
+      </div>
     </div>
 
     <div class="hero-stats">
       <div class="stat">
-        <div class="stat-num">30+</div>
+        <div class="stat-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>30+</span>
+        </div>
         <div class="stat-label">Đánh giá<br>Google Maps</div>
       </div>
       <div class="stat">
-        <div class="stat-num">100%</div>
+        <div class="stat-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          <span>100%</span>
+        </div>
         <div class="stat-label">Học viên đạt<br>band điểm mục tiêu</div>
       </div>
       <div class="stat">
-        <div class="stat-num">18</div>
+        <div class="stat-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>18</span>
+        </div>
         <div class="stat-label">Tháng từ con số 0<br>đến IELTS 7.0+</div>
       </div>
       <div class="stat">
-        <div class="stat-num">8.0+</div>
+        <div class="stat-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stat-icon"><path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"></path><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          <span>8.0+</span>
+        </div>
         <div class="stat-label">IELTS của toàn bộ<br>đội ngũ giảng viên</div>
       </div>
     </div>
@@ -1234,7 +1404,7 @@
       <div class="step-dot">01</div>
       <div class="step-content">
         <div class="step-meta">
-          <span class="step-level">General English · 0–3.5</span>
+          <span class="step-level">General English<span class="d-none-mobile"> · </span><span class="d-block-mobile">0–3.5</span></span>
           <span class="step-duration">~4 tháng · 45 giờ</span>
         </div>
         <h3>Xây gốc từ con số 0</h3>
@@ -1246,7 +1416,7 @@
       <div class="step-dot">02</div>
       <div class="step-content">
         <div class="step-meta">
-          <span class="step-level">Pre-IELTS · 3.5–4.5</span>
+          <span class="step-level">Pre-IELTS<span class="d-none-mobile"> · </span><span class="d-block-mobile">3.5–4.5</span></span>
           <span class="step-duration">~4 tháng · 60 giờ</span>
         </div>
         <h3>Làm quen với tư duy học thuật</h3>
@@ -1258,7 +1428,7 @@
       <div class="step-dot">03</div>
       <div class="step-content">
         <div class="step-meta">
-          <span class="step-level">Intermediate · 4.5–5.5</span>
+          <span class="step-level">Intermediate<span class="d-none-mobile"> · </span><span class="d-block-mobile">4.5–5.5</span></span>
           <span class="step-duration">~4 tháng · 60 giờ</span>
         </div>
         <h3>Phát triển kỹ năng làm bài</h3>
@@ -1270,7 +1440,7 @@
       <div class="step-dot">04</div>
       <div class="step-content">
         <div class="step-meta">
-          <span class="step-level">Upper-Intermediate · 5.5–6.5</span>
+          <span class="step-level">Upper-Intermediate<span class="d-none-mobile"> · </span><span class="d-block-mobile">5.5–6.5</span></span>
           <span class="step-duration">~4 tháng · 60 giờ</span>
         </div>
         <h3>Chuyên sâu xử lý đề khó</h3>
@@ -1282,7 +1452,7 @@
       <div class="step-dot">05</div>
       <div class="step-content">
         <div class="step-meta">
-          <span class="step-level">Pre-Test · 6.5–7.0+</span>
+          <span class="step-level">Pre-Test<span class="d-none-mobile"> · </span><span class="d-block-mobile">6.5–7.0+</span></span>
           <span class="step-duration">~2 tháng · 25–30 giờ</span>
         </div>
         <h3>Thực chiến — bứt phá band điểm</h3>
@@ -1428,6 +1598,9 @@
     <div class="score-pill" data-year="2025"><div class="score-dot"></div><div><span class="score-name">Tống Thị Phương Thanh</span><div class="score-note">Nhân viên văn phòng · Công việc</div></div><span class="score-band">6.5</span></div>
     <div class="score-pill" data-year="2025"><div class="score-dot"></div><div><span class="score-name">Kim Hương</span><div class="score-note">Nhân viên văn phòng · Xét tuyển cao học</div></div><span class="score-band">6.0</span></div>
   </div>
+  <div class="proof-more">
+    <button id="proofSeeMore" class="btn-ghost" style="padding: 8px 24px; font-size: 0.9rem;" onclick="document.querySelector('.proof-scores').classList.add('expanded'); this.closest('.proof-more').style.display='none';">Xem thêm</button>
+  </div>
 </section>
 
 <!-- VISION -->
@@ -1535,9 +1708,40 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <strong>Alice's Class</strong> — Lớp luyện thi IELTS tại Thủ Đức, TP. Hồ Chí Minh<br>
-  📞 076 728 9011 &nbsp;|&nbsp; Theo dõi chúng tôi trên <strong><a href="https://www.facebook.com/aliceclass.luyenthiielts">Facebook</a></strong> & <strong><a href="https://maps.app.goo.gl/EBGz4Giavo9bPE3q6">Google Maps</a></strong>
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- <div class="footer-locations">
+      <h4>Tại TP.HCM:</h4>
+      <ul>
+        <li>Thủ Đức, TP. Hồ Chí Minh</li>
+      </ul>
+    </div> -->
+    
+    <div class="footer-brand">
+      <!-- <img src="/assets/logo-alice.png" alt="Alice Class Logo" class="footer-logo"> -->
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/aliceclass.luyenthiielts" class="social-icon" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://maps.app.goo.gl/EBGz4Giavo9bPE3q6" class="social-icon" aria-label="Google Maps">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-info">
+      <h4>Hotline: <a href="tel:0767289011" style="text-decoration: none; color: inherit;">076 728 9011</a></h4>
+      <p>Trung tâm luyện thi Alice's Class - Đồng hành cùng bạn chinh phục IELTS.</p>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>Copyright 2024 © Alice's Class</div>
+      <div>
+        <a href="/privacy.html">Chính sách bảo mật</a> | 
+        <a href="/terms.html">Điều kiện &amp; Điều khoản</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <!-- FLOATING CTA -->

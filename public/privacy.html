@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chính sách bảo mật — Alice's Class</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FDFBF7;
+      --charcoal: #1C1C1C;
+      --mid: #4A4A4A;
+      --soft: #7A7A7A;
+      --border: #E8E0D8;
+      --red: #C8102E;
+      --red-hover: #A00D25;
+      --red-dark: #81081A;
+      --red-light: #FDF2F4;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--charcoal);
+      margin: 0;
+      line-height: 1.6;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 251, 247, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 5%;
+    }
+    h1, h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--charcoal);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    p, li {
+      color: var(--mid);
+      margin-bottom: 16px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    
+    /* ─── FOOTER STRUCTURE ─── */
+    .site-footer {
+      background-color: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 60px 5% 100px 5%;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      margin-top: 60px;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      text-align: left;
+    }
+    .footer-locations h4, .footer-info h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: var(--charcoal);
+    }
+    .footer-locations ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-locations li {
+      margin-bottom: 4px;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+    .footer-logo {
+      height: 60px;
+      width: auto;
+      margin-bottom: 20px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--charcoal);
+      border-radius: 8px;
+      color: var(--charcoal);
+      transition: all 0.2s;
+    }
+    .social-icon:hover {
+      background: var(--charcoal);
+      color: #fff;
+    }
+    .social-icon svg {
+      width: 18px;
+      height: 18px;
+    }
+    .footer-info p {
+      color: var(--mid);
+      margin: 0;
+    }
+    .footer-bottom {
+      margin-top: 8px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--soft);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .footer-bottom a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: 768px) {
+      .footer-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .footer-locations, .footer-info {
+        flex: 1 1 30%;
+      }
+      .footer-brand, .footer-socials {
+        flex: 1 1 100%;
+      }
+      .footer-bottom {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/landing.html"><img src="/assets/logo-alice.png" alt="Alice Class Logo" style="height:44px; width:auto;"></a>
+</nav>
+
+<div class="container">
+  <h1>Chính sách bảo mật</h1>
+  <p>Cảm ơn bạn đã tin tưởng và lựa chọn Alice's Class. Chúng tôi cam kết bảo vệ thông tin cá nhân và quyền riêng tư của bạn. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng và chia sẻ thông tin của bạn khi bạn sử dụng trang web của chúng tôi.</p>
+
+  <h2>1. Thu thập thông tin</h2>
+  <p>Khi bạn đăng ký nhận tư vấn lộ trình học, chúng tôi có thể thu thập các thông tin sau:</p>
+  <ul>
+    <li>Họ và tên</li>
+    <li>Số điện thoại</li>
+    <li>Email (nếu có)</li>
+    <li>Giai đoạn học tập và mức điểm IELTS hiện tại</li>
+    <li>Mục tiêu học tập của bạn</li>
+  </ul>
+
+  <h2>2. Sử dụng thông tin</h2>
+  <p>Thông tin của bạn được sử dụng cho các mục đích:</p>
+  <ul>
+    <li>Liên hệ tư vấn, đặt lịch đánh giá năng lực và lộ trình học tập miễn phí.</li>
+    <li>Cung cấp thông tin về các khóa học, sự kiện hoặc chương trình khuyến mãi phù hợp.</li>
+    <li>Cải thiện chất lượng dịch vụ và tối ưu hóa trải nghiệm người dùng trên website.</li>
+  </ul>
+
+  <h2>3. Bảo mật thông tin</h2>
+  <p>Chúng tôi áp dụng các biện pháp bảo mật hợp lý để bảo vệ thông tin cá nhân của bạn khỏi việc truy cập, sử dụng, hoặc tiết lộ trái phép. Thông tin của bạn được lưu trữ an toàn và chỉ những nhân viên có thẩm quyền mới được phép tiếp cận.</p>
+
+  <h2>4. Chia sẻ thông tin</h2>
+  <p>Chúng tôi tuyệt đối không bán, trao đổi hoặc cho thuê thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào khi chưa có sự đồng ý của bạn. Chúng tôi có thể chia sẻ thông tin trong trường hợp được yêu cầu bởi cơ quan có thẩm quyền theo quy định của pháp luật.</p>
+
+  <h2>5. Liên hệ</h2>
+  <p>Nếu bạn có bất kỳ thắc mắc nào về chính sách bảo mật này hoặc cần cập nhật, xóa thông tin cá nhân của mình, vui lòng liên hệ:</p>
+  <p><strong>Hotline:</strong> 076 728 9011<br>
+  <strong>Facebook:</strong> <a href="https://www.facebook.com/aliceclass.luyenthiielts">Alice's Class</a></p>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-locations">
+      <h4>Tại TP.HCM:</h4>
+      <ul>
+        <li>Thủ Đức, TP. Hồ Chí Minh</li>
+      </ul>
+    </div>
+    
+    <div class="footer-brand">
+      <img src="/assets/logo-alice.png" alt="Alice Class Logo" class="footer-logo">
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/aliceclass.luyenthiielts" class="social-icon" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://maps.app.goo.gl/EBGz4Giavo9bPE3q6" class="social-icon" aria-label="Google Maps">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-info">
+      <h4>Hotline: <a href="tel:0767289011" style="text-decoration: none; color: inherit;">076 728 9011</a></h4>
+      <p>Trung tâm luyện thi Alice's Class - Đồng hành cùng bạn chinh phục IELTS.</p>
+    </div>
+    
+    <div class="footer-bottom">
+      <div>Copyright 2024 © Alice's Class</div>
+      <div>
+        <a href="/privacy.html">Chính sách bảo mật</a> | 
+        <a href="/terms.html">Điều kiện &amp; Điều khoản</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
