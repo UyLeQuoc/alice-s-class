@@ -1074,11 +1074,11 @@
 
   /* ─── FOOTER STRUCTURE ─── */
   .site-footer {
-    background-color: var(--bg);
+    background-color: var(--charcoal);
     border-top: 1px solid var(--border);
     padding: 60px 5% 100px 5%;
     font-size: 0.9rem;
-    color: var(--charcoal);
+    color: var(--warm-white);
   }
   .footer-container {
     max-width: 1200px;
@@ -1092,7 +1092,7 @@
     font-weight: 700;
     margin-bottom: 8px;
     font-size: 1.1rem;
-    color: var(--charcoal);
+    color: var(--warm-white); /* Flipped from --charcoal */
   }
   .footer-locations ul {
     list-style: none;
@@ -1101,7 +1101,7 @@
   }
   .footer-locations li {
     margin-bottom: 4px;
-    color: var(--mid);
+    color: rgba(255, 255, 255, 0.7); /* Flipped from --mid for readability */
     line-height: 1.5;
   }
   .footer-logo {
@@ -1119,13 +1119,14 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 1.5px solid var(--charcoal);
+    border: 1.5px solid var(--warm-white); /* Flipped from --charcoal */
     border-radius: 8px;
-    color: var(--charcoal);
+    color: var(--warm-white); /* Flipped from --charcoal */
     transition: all 0.2s;
   }
   .social-icon:hover {
-    background: var(--charcoal);
+    background: var(--red); /* Replaced --charcoal so the hover effect is visible */
+    border-color: var(--red);
     color: #fff;
   }
   .social-icon svg {
@@ -1133,15 +1134,15 @@
     height: 18px;
   }
   .footer-info p {
-    color: var(--mid);
+    color: rgba(255, 255, 255, 0.7); /* Flipped from --mid */
     margin: 0;
   }
   .footer-bottom {
     margin-top: 8px;
     padding-top: 24px;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Flipped from var(--border) */
     font-size: 0.85rem;
-    color: var(--soft);
+    color: rgba(255, 255, 255, 0.5); /* Flipped from --soft */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
