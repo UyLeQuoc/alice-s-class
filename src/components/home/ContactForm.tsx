@@ -64,7 +64,7 @@ export function ContactForm() {
     if (!validateForm()) return;
 
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxzjtClMYfkcJRrgHl-AEFCRTeEq-2VHr8hXJbwIYgmkI7ds_ioPTKZ6-BPD7Dh_dJQnA/exec";
+      "https://script.google.com/macros/s/AKfycbzB8VHPqb1SF3toTJpYMQzcnBrPULNfhLB38HoezaWAB-rE6zuM5UXU4CmGNkwJOteD/exec";
 
     setLoading(true);
     try {
