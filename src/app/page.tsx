@@ -141,7 +141,7 @@ export default function Page() {
                 btn.disabled = true;
                 btn.innerHTML = 'Đang gửi...';
 
-                const scriptURL = "https://script.google.com/macros/s/AKfycbxf5jvvLiAdLep_aEAemXv6W04lU_4olMW-GwOeuKAl4--iAvkVNBp2k1Hec_fs2jntSA/exec";
+                const scriptURL = "https://script.google.com/macros/s/AKfycbzB8VHPqb1SF3toTJpYMQzcnBrPULNfhLB38HoezaWAB-rE6zuM5UXU4CmGNkwJOteD/exec";
                 const messageDetails = `Giai đoạn: ${stage} | Band: ${band} | Mục tiêu: ${goal}`;
 
                 try {
